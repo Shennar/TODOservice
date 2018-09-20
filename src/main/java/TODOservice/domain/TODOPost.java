@@ -27,7 +27,7 @@ public class TODOPost {
     @Column (name = "Status", nullable = false)
     private boolean doneStatus;
 
-    public boolean setDoneStatus() {  return doneStatus;   }
+    public boolean isDoneStatus() {  return doneStatus;   }
 
     public void setDoneStatus(boolean doneStatus) { this.doneStatus = doneStatus;  }
 

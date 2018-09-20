@@ -1,4 +1,4 @@
-package TODOservice.web.dtos;
+package TODOservice.web.dto;
 
 import org.joda.time.DateTime;
 
@@ -20,7 +20,7 @@ public class TODOpostDTO {
         this.doneStatus=doneStatus;
     }
 
-    public boolean setDoneStatus() {  return doneStatus;   }
+    public boolean isDoneStatus() {  return doneStatus;   }
 
     public void setDoneStatus(boolean doneStatus) { this.doneStatus = doneStatus;  }
 
