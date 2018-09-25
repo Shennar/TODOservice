@@ -13,8 +13,8 @@ $(document).ready(function() {
                         '<td>' + task.whatTODO + '</td>' +
                         '<td>' + task.status + '</td>' +
                         '<td class="text-center">' +
-                        '<a href="${pageContext.request.contextPath}/changestatus/${task}">Change status</a><br/>'+
-                        '<a href="${pageContext.request.contextPath}/delete">Delete task</a><br/>'+
+                        '<a href="${pageContext.request.contextPath}/changestatus/${task.id}">Change status</a><br/>'+
+                        '<a href="${pageContext.request.contextPath}/delete/${task.id}">Delete task</a><br/>'+
                         '</td>' +
                         '</tr>';
 

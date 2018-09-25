@@ -8,10 +8,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class WebController {
 
-    @RequestMapping(value={"/", "index"}, method=RequestMethod.GET)
-    public ModelAndView homePage() {
-        return new ModelAndView("todolist");
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String homePage() {
+ //       return new ModelAndView("todolist");
+        return "todolist";
     }
-
 }
 

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "TODObase")
+@Table(name = "todobase")
 public class TODOPost {
 
     @Id

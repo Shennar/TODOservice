@@ -24,6 +24,7 @@
         </tr>
         </thead>
         <tbody>
+        <!--
         <c:forEach var="task" items="${TODOlist}">
             <td>"${task.dateTime}"</td>
             <td>"${task.whatTODO}"</td>
@@ -33,6 +34,7 @@
                 <a href="${pageContext.request.contextPath}/delete/${task.id}.json">Delete task</a>
             </td>
         </c:forEach>
+        -->
         </tbody>
         <tfoot>
         <tr>

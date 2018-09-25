@@ -1,30 +1,27 @@
-package TODOservice;
+/*package TODOservice.init;
+
 import TODOservice.dao.TODOServiceDAO;
 import TODOservice.domain.TODOPost;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
 import org.joda.time.DateTime;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.annotation.PostConstruct;
 
-@SpringBootApplication
-@EnableJpaRepositories
-public class StartTODOserviceApp extends SpringBootServletInitializer {
+
+//@Component
+public class DatabaseInit implements ApplicationRunner {
     private TODOServiceDAO todoServiceDAO;
+
+    @Autowired
+    public DatabaseInit(TODOServiceDAO todoServiceDAO) {
+        this.todoServiceDAO = todoServiceDAO;
+    }
+
     @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(StartTODOserviceApp.class);
-    }
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(StartTODOserviceApp.class, args);
-    }
-
-  /*  @PostConstruct
-    public void initdb() {
-
+    public void run(ApplicationArguments args) throws Exception {
         long count = todoServiceDAO.count();
         if (count == 0) {
             for (int i = 0; i < 5; i++) {
@@ -42,5 +39,6 @@ public class StartTODOserviceApp extends SpringBootServletInitializer {
             todoServiceDAO.save(todoPost);
         }
     }
-    */
 }
+
+*/
