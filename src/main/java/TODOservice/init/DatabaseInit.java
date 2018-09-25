@@ -1,4 +1,4 @@
-/*package TODOservice.init;
+package TODOservice.init;
 
 import TODOservice.dao.TODOServiceDAO;
 import TODOservice.domain.TODOPost;
@@ -11,7 +11,7 @@ import org.joda.time.DateTime;
 import javax.annotation.PostConstruct;
 
 
-//@Component
+@Component
 public class DatabaseInit implements ApplicationRunner {
     private TODOServiceDAO todoServiceDAO;
 
@@ -26,14 +26,14 @@ public class DatabaseInit implements ApplicationRunner {
         if (count == 0) {
             for (int i = 0; i < 5; i++) {
                 TODOPost todoPost = new TODOPost();
-                todoPost.setDateTime(DateTime.parse("2018-05-05 10:11:12.123"));// Think about string for date-time
+                todoPost.setDateTime(DateTime.now().toString());// parse("2018-05-05T10:11:12.123") Think about string for date-time
                 todoPost.setWhatTODO("Do the excercise #" + (i + 1) + "!");
                 todoPost.setDoneStatus(false);
 
                 todoServiceDAO.save(todoPost);
             }
             TODOPost todoPost = new TODOPost();
-            todoPost.setDateTime(DateTime.now());
+            todoPost.setDateTime(DateTime.now().toString());
             todoPost.setWhatTODO("Do the excercise #" + 6 + "!");
             todoPost.setDoneStatus(false);
             todoServiceDAO.save(todoPost);
@@ -41,4 +41,3 @@ public class DatabaseInit implements ApplicationRunner {
     }
 }
 
-*/

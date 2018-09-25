@@ -23,6 +23,7 @@
             <th>Date&Time</th><th>Task</th><th>Done</th><th>Actions</th>
         </tr>
         </thead>
+
         <tbody>
         <!--
         <c:forEach var="task" items="${TODOlist}">
@@ -42,10 +43,10 @@
             <td><form:input type="datetime-local" path="dateTime" /></td>
             <td><form:input type="text" path="$whatTODO"/></td>
             <td>
-                <form:select path="status">
-                    <form:option value="false" selected="selected">false</form:option>
-                    <form:option value="true">true</form:option>
-                </form:select>
+                <!--
+
+                -->
+                <form:input type="boolean" path="status" /></td)
             </td>
             <td>
              <!--   <a href="${pageContext.request.contextPath}/add.json">Add task</a><br/>

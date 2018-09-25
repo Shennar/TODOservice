@@ -6,22 +6,24 @@ $(document).ready(function() {
             type : "GET",
             url : window.location + "/",
             success: function(result){
-                $.each(result, function(task){
+                $.if(!Object.keys(result).length)
+                {
+                    $.each(result, function (task) {
 
-                    var taskRow = '<tr>' +
-                        '<td>' + task.dateTime + '</td>' +
-                        '<td>' + task.whatTODO + '</td>' +
-                        '<td>' + task.status + '</td>' +
-                        '<td class="text-center">' +
-                        '<a href="${pageContext.request.contextPath}/changestatus/${task.id}">Change status</a><br/>'+
-                        '<a href="${pageContext.request.contextPath}/delete/${task.id}">Delete task</a><br/>'+
-                        '</td>' +
-                        '</tr>';
+                        var taskRow = '<tr>' +
+                            '<td>' + task.dateTime + '</td>' +
+                            '<td>' + task.whatTODO + '</td>' +
+                            '<td>' + task.status + '</td>' +
+                            '<td class="text-center">' +
+                            '<a href="${pageContext.request.contextPath}/changestatus/${task.id}">Change status</a><br/>' +
+                            '<a href="${pageContext.request.contextPath}/delete/${task.id}">Delete task</a><br/>' +
+                            '</td>' +
+                            '</tr>';
 
-                    $('#taskTable tbody').append(taskRow);
+                        $('#taskTable tbody').append(taskRow);
 
-                });
-
+                    });
+                }
             },
             error : function(e) {
                 alert("ERROR: ", e);

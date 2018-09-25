@@ -19,7 +19,7 @@ public class TODOPost {
     private Long id;
 
     @Column (name = "Date", nullable = false)
-    private DateTime dateTime;
+    private String dateTime;
 
     @Column (name = "WhatTODO", nullable = false)
     private String whatTODO;
@@ -35,9 +35,9 @@ public class TODOPost {
 
     public void setId(Long id) { this.id = id; }
 
-    public DateTime getDateTime() { return dateTime;    }
+    public String getDateTime() { return dateTime;    }
 
-    public void setDateTime(DateTime dateTime) {  this.dateTime = dateTime;    }
+    public void setDateTime(String dateTime) {  this.dateTime = dateTime;    }
 
     public String getWhatTODO() {  return whatTODO;    }
 

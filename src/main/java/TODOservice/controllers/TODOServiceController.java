@@ -39,7 +39,9 @@ public class TODOServiceController {
             consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public TODOPost addTODOpost(@RequestBody @Valid TODOPost postToAdd) {
-        Long id = todoServiceDAO.saveAndFlush(postToAdd).getId();
+        Long id = todoServiceDAO
+                .saveAndFlush(postToAdd)
+                .getId();
         postToAdd.setId(id);
         return postToAdd;
     }
@@ -49,7 +51,7 @@ public class TODOServiceController {
             consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public void deleteTODOPost(@PathVariable Long idToDelete) {
-        todoServiceDAO.deleteById(idToDelete);
+            todoServiceDAO.deleteById(idToDelete);
     }
 
 
