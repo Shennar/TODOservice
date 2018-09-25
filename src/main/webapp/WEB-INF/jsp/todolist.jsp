@@ -25,7 +25,7 @@
         </thead>
 
         <tbody>
-        <!--
+
         <c:forEach var="task" items="${TODOlist}">
             <td>"${task.dateTime}"</td>
             <td>"${task.whatTODO}"</td>
@@ -35,17 +35,16 @@
                 <a href="${pageContext.request.contextPath}/delete/${task.id}.json">Delete task</a>
             </td>
         </c:forEach>
-        -->
+
         </tbody>
+        <
         <tfoot>
         <tr>
             <form:form id="addTask" action="/add.json" method="post">
-            <td><form:input type="datetime-local" path="dateTime" /></td>
+            <td><form:input type="text" path="dateTime" /></td>
             <td><form:input type="text" path="$whatTODO"/></td>
             <td>
-                <!--
 
-                -->
                 <form:input type="boolean" path="status" /></td)
             </td>
             <td>
@@ -56,6 +55,7 @@
             </form:form>
         </tr>
         </tfoot>
+
     </table>
 
 </div>
