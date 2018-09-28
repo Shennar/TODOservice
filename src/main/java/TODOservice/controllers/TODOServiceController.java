@@ -40,10 +40,10 @@ public class TODOServiceController {
         return postToAdd;
     }
 
-    @RequestMapping(value = "/todo/{id}", method = RequestMethod.DELETE,
+    @RequestMapping(value = "/todo", method = RequestMethod.DELETE,
             consumes = "application/json")
     @ResponseBody
-    public String deleteTODOPost(@PathVariable Long idToDelete) {
+    public String deleteTODOPost(@RequestBody Long idToDelete) {
         String deleteResponse="Booo!";
            try {
                todoServiceDAO.deleteById(idToDelete);
@@ -54,10 +54,10 @@ public class TODOServiceController {
     }
 
 
-    @RequestMapping(value = "/todo/{id}", method = RequestMethod.PUT,
+    @RequestMapping(value = "/todo", method = RequestMethod.PUT,
             produces = "application/json")
     @ResponseBody
-    public TODOPost changeStatus(@PathVariable Long idToChange) {
+    public TODOPost changeStatus(@RequestBody Long idToChange) {
         List<TODOPost> allPosts = todoServiceDAO.findAll();
         TODOPost post = allPosts.get(idToChange.intValue());
         if (post.isDoneStatus()) post.setDoneStatus(false);

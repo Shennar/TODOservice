@@ -13,7 +13,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>TODO list</title>
     <c:set var="root" value="${pageContext.request.contextPath}"/>
-    <link rel="stylesheet" type="text/css" href="${root}/style.css" />
+    <link rel="stylesheet" type="text/css" href="${root}/css/style.css" />
     <script type="text/javascript" src="${root}/js/todoactions.js"></script>
 
 </head>
@@ -27,7 +27,6 @@
             <th>Date&Time</th><th>Task</th><th>Done</th><th>Actions</th>
         </tr>
         </thead>
-
         <tbody>
 
         </tbody>
@@ -37,5 +36,6 @@
 
     </table>
 </div>
+
 </body>
 </html>

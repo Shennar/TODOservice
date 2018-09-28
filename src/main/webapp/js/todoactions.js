@@ -1,35 +1,31 @@
 $(document).ready(function() {
-    console.log("ajax");
     $.ajax({
         dataType: 'json',
         type: "GET",
         url: window.location+"todo",
         success: function (data) {
-            console.log("Data:");
-            console.log(data);
-
             $.each(data, function (index, task) {
 
                 var taskRow = '<tr>' +
                     '<td>' + task.datum + '</td>' +
                     '<td>' + task.whatTODO + '</td>' +
                     '<td class="status">' + task.doneStatus + '</td>' +
-                    '<td>' +
-                    '<a href="/todo/'+task.id+'">Change status</a><br/>' +
-                    '<a href="/todo/'+task.id+'">Delete task</a><br/>' +
-                    '</td>' +
+                    '<td><form:form class='+task.id+'>' +
+                   // '<input type="hidden" value='+task.id+'>' +
+                    '<button type="submit" class="changeButton" id="change">Change status</button><br/>' +
+                    '<button type="submit" class="delete"> Delete task </button><br/>' +
+                    '</form:form></td>' +
                     '</tr>';
-
                 $('#taskTable tbody').append(taskRow);
             });
-            var addRow='<tr>' +
+            var addRow='<tr><form method="post" id="addTaskForm">' +
                 '<td>' + 'For date' + '</td>' +
                 '<td>' + 'For task' + '</td>' +
                 '<td class="status">' + 'For status' + '</td>' +
                 '<td>' +
-                '<a href="/todo/">Add task</a>' +
+                '<button type="submit" class="addTask"> Add task </button><br/>' +
                 '</td>' +
-                '</tr>';
+                '</form></tr>';
             $('#taskTable tfoot').append(addRow);
         }
         ,
@@ -38,8 +34,46 @@ $(document).ready(function() {
             console.log("ERROR: ", e);
         }
     });
+    $('button').click(function () {
+        var buttonType=$(this).attr('class');
+        console.log(buttonType);
+        var id;
+        if (buttonType.eq("changeButton")) {
+            id = $('form').attr('class');
+            $.ajax({
+                url: window.location+"todo",
+                data: idToChange=id,
+                type: "UPDATE",
+                dataType:"json",
+                success: function(){
+                    var rowToChange=$(event.target).closest("tr");
+                    rowToChange.$('.status').replaceWith('<td class="status">' + data.doneStatus + '</td>');
+                    console.log("Booo!");
+                }
+            })
+        }
+        if (buttonType.eq("delete")) {
+            id = $('form').attr('class');
+            console.log(id);
+            $.ajax({
+                url: window.location+"todo",
+                data: idToDelete=id,
+                type: "DELETE",
+                dataType:"json",
+                success: function(){
+                    var rowToChange=$(event.target).closest("tr");
+                    rowToChange.remove();
+                    console.log(data.text);
+                }
+            })
+        }
+    });
+
+});
+
     // Do DELETE a task via JQUERY AJAX
 
+/*
     var deleteLink = $("a:contains('Delete')");
 
     $(deleteLink).click(function(event) {
@@ -47,12 +81,13 @@ $(document).ready(function() {
         $.ajax({
             url: window.location + "todo",
             type: "DELETE",
+      //      data:
             /*
                             beforeSend: function(xhr) {
                                 xhr.setRequestHeader("Accept", "application/json");
                                 xhr.setRequestHeader("Content-Type", "application/json");
                             },
-            */
+
             success: function() {
 
                 var rowToDelete = $(event.target).closest("tr");
@@ -63,8 +98,9 @@ $(document).ready(function() {
 
         event.preventDefault();
     });
+    */
     // Do Add a task via JQUERY AJAX
-    $('#addTask').submit(function(event) {
+ /*   $('#addTask').submit(function(event) {
 
         var datum = "time";//$('#dateTime').val();
         var whatTODO = "task";//$('#whatTODO').val();
@@ -100,10 +136,10 @@ $(document).ready(function() {
                     alert("ERROR: ", e);
                     console.log("ERROR: ", e);
                 } */
-        });
+      /*  });
 
         event.preventDefault();
-    });
+    }); */
     // Do Change Status of a task via JQUERY AJAX
 
     /*
@@ -123,7 +159,7 @@ $(document).ready(function() {
               }
       });
   */
-}); //doc.ready
+//}); //doc.ready
 
 // Do DELETE a Customer via JQUERY AJAX
 //$(document).ready(function() {
