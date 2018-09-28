@@ -34,7 +34,7 @@ $(document).ready(function() {
             console.log("ERROR: ", e);
         }
     });
-    $('button').click(function () {
+    $('#change').click(function () {
         var buttonType=$(this).attr('class');
         console.log(buttonType);
         var id;
