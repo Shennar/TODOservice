@@ -2,43 +2,37 @@ package TODOservice.controllers;
 
 import TODOservice.dao.TODOServiceDAO;
 import TODOservice.domain.TODOPost;
+import com.sun.jdi.connect.IllegalConnectorArgumentsException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import java.lang.IllegalArgumentException;
 
+
+import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.util.List;
 
-@Controller
+@RestController
+@Transactional
 public class TODOServiceController {
 
     @Autowired
     private TODOServiceDAO todoServiceDAO;
 
-    /*
-        @RequestMapping(value={"/","/index"}, method = RequestMethod.GET)
-        public ModelAndView allTasks() {
-            ModelAndView mav = new ModelAndView("todolist");
-            List<TODOPost> allPosts = new ArrayList<TODOPost>();
-            allPosts.addAll(getAllPosts());
-            mav.addObject("TODOlist", allPosts);
-            return mav;
-        }
-    */
-    @RequestMapping(value = "/", method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/todo", method = RequestMethod.GET,
+            produces = "application/json")
     @ResponseBody
     public List<TODOPost> getAllPosts() {
-        return todoServiceDAO.findAll();
+          List<TODOPost> allPosts = todoServiceDAO.findAll();
+      return allPosts;
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST,
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/todo", method = RequestMethod.POST,
+            produces = "application/json",
+            consumes = "application/json")
     @ResponseBody
-    public TODOPost addTODOpost(@RequestBody @Valid TODOPost postToAdd) {
+    public TODOPost addTODOPost(@RequestBody @Valid TODOPost postToAdd) {
+
         Long id = todoServiceDAO
                 .saveAndFlush(postToAdd)
                 .getId();
@@ -46,18 +40,22 @@ public class TODOServiceController {
         return postToAdd;
     }
 
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST,
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/todo/{id}", method = RequestMethod.DELETE,
+            consumes = "application/json")
     @ResponseBody
-    public void deleteTODOPost(@PathVariable Long idToDelete) {
-            todoServiceDAO.deleteById(idToDelete);
+    public String deleteTODOPost(@PathVariable Long idToDelete) {
+        String deleteResponse="Booo!";
+           try {
+               todoServiceDAO.deleteById(idToDelete);
+           } catch (IllegalArgumentException e){
+               deleteResponse+="Terrible failure!";
+           }
+            return deleteResponse;
     }
 
 
-    @RequestMapping(value = "/changestatus/{id}", method = RequestMethod.POST,
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/todo/{id}", method = RequestMethod.PUT,
+            produces = "application/json")
     @ResponseBody
     public TODOPost changeStatus(@PathVariable Long idToChange) {
         List<TODOPost> allPosts = todoServiceDAO.findAll();

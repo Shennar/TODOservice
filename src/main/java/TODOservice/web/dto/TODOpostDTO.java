@@ -6,16 +6,16 @@ public class TODOpostDTO {
 
     private Long id;
 
-    private DateTime dateTime;
+    private String datum;
 
     private String whatTODO;
 
     private boolean doneStatus;
 
     public TODOpostDTO(){}
-    public TODOpostDTO(Long id, DateTime dateTime, String whatTODO, boolean doneStatus){
+    public TODOpostDTO(Long id, String datum, String whatTODO, boolean doneStatus){
         this.id=id;
-        this.dateTime=dateTime;
+        this.datum=datum;
         this.whatTODO=whatTODO;
         this.doneStatus=doneStatus;
     }
@@ -28,9 +28,9 @@ public class TODOpostDTO {
 
     public void setId(Long id) { this.id = id; }
 
-    public DateTime getDateTime() { return dateTime;    }
+    public String getDatum() { return datum;    }
 
-    public void setDateTime(DateTime dateTime) {  this.dateTime = dateTime;    }
+    public void setDatum(String dateTime) {  this.datum = dateTime;    }
 
     public String getWhatTODO() {  return whatTODO;    }
 

@@ -19,7 +19,7 @@ public class TODOPost {
     private Long id;
 
     @Column (name = "Date", nullable = false)
-    private String dateTime;
+    private String datum;
 
     @Column (name = "WhatTODO", nullable = false)
     private String whatTODO;
@@ -35,19 +35,20 @@ public class TODOPost {
 
     public void setId(Long id) { this.id = id; }
 
-    public String getDateTime() { return dateTime;    }
+    public String getDatum() { return datum;    }
 
-    public void setDateTime(String dateTime) {  this.dateTime = dateTime;    }
+    public void setDatum(String datum) {  this.datum = datum;    }
 
     public String getWhatTODO() {  return whatTODO;    }
 
     public void setWhatTODO(String whatTODO) {   this.whatTODO = whatTODO;    }
-
+/*
     @Override
     public String toString() {
         return "TODO: " +
-                "When: " + dateTime +"\n" +
+                "When: " + datum +"\n" +
                 "What: " + whatTODO + "\n" +
-                "Status: "+(doneStatus?"Done":"Not done");
+                "Status: "+(doneStatus?"Done\n":"Not done\n");
     }
+    */
 }
