@@ -2,7 +2,7 @@ package TODOservice.controllers;
 
 import TODOservice.dao.TODOServiceDAO;
 import TODOservice.domain.TODOPost;
-import com.sun.jdi.connect.IllegalConnectorArgumentsException;
+import TODOservice.web.dto.TODOpostDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.lang.IllegalArgumentException;
@@ -27,12 +27,16 @@ public class TODOServiceController {
       return allPosts;
     }
 
-    @RequestMapping(value = "/todo", method = RequestMethod.POST,
+    @RequestMapping(value = "/todo", method = RequestMethod.POST
+            /*,
             produces = "application/json",
-            consumes = "application/json")
+            consumes = "application/json"*/)
     @ResponseBody
-    public TODOPost addTODOPost(@RequestBody @Valid TODOPost postToAdd) {
-
+    public TODOPost addTODOPost(@RequestBody @Valid TODOpostDTO post) {
+        TODOPost postToAdd = new TODOPost();
+        postToAdd.setWhatTODO(post.getWhatTODO());
+        postToAdd.setDatum(post.getDatum());
+        postToAdd.setDoneStatus(false);//(post.isDoneStatus());
         Long id = todoServiceDAO
                 .saveAndFlush(postToAdd)
                 .getId();
@@ -40,10 +44,10 @@ public class TODOServiceController {
         return postToAdd;
     }
 
-    @RequestMapping(value = "/todo", method = RequestMethod.DELETE,
-            consumes = "application/json")
+    @RequestMapping(value = "/todo", method = RequestMethod.DELETE)
+           // consumes = "application/json")
     @ResponseBody
-    public String deleteTODOPost(@RequestBody Long idToDelete) {
+    public String deleteTODOPost(@RequestParam("idToDelete") Long idToDelete) {
         String deleteResponse="Booo!";
            try {
                todoServiceDAO.deleteById(idToDelete);
@@ -55,9 +59,10 @@ public class TODOServiceController {
 
 
     @RequestMapping(value = "/todo", method = RequestMethod.PUT,
+        //    consumes = "application/json",
             produces = "application/json")
     @ResponseBody
-    public TODOPost changeStatus(@RequestBody Long idToChange) {
+    public TODOPost changeStatus(@RequestParam("idToChange") Long idToChange) {
         List<TODOPost> allPosts = todoServiceDAO.findAll();
         TODOPost post = allPosts.get(idToChange.intValue());
         if (post.isDoneStatus()) post.setDoneStatus(false);
