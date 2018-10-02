@@ -4,6 +4,7 @@ import TODOservice.dao.TODOServiceDAO;
 import TODOservice.domain.TODOPost;
 import TODOservice.web.dto.TODOpostDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import java.lang.IllegalArgumentException;
 
@@ -20,17 +21,16 @@ public class TODOServiceController {
     private TODOServiceDAO todoServiceDAO;
 
     @RequestMapping(value = "/todo", method = RequestMethod.GET,
-            produces = "application/json")
+            produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public List<TODOPost> getAllPosts() {
           List<TODOPost> allPosts = todoServiceDAO.findAll();
       return allPosts;
     }
 
-    @RequestMapping(value = "/todo", method = RequestMethod.POST
-            /*,
-            produces = "application/json",
-            consumes = "application/json"*/)
+    @RequestMapping(value = "/todo", method = RequestMethod.POST,
+            produces = MediaType.APPLICATION_JSON_VALUE,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public TODOPost addTODOPost(@RequestBody @Valid TODOpostDTO post) {
         TODOPost postToAdd = new TODOPost();
@@ -44,7 +44,8 @@ public class TODOServiceController {
         return postToAdd;
     }
 
-    @RequestMapping(value = "/todo", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/todo", method = RequestMethod.DELETE,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
            // consumes = "application/json")
     @ResponseBody
     public String deleteTODOPost(@RequestParam("idToDelete") Long idToDelete) {
@@ -60,7 +61,7 @@ public class TODOServiceController {
 
     @RequestMapping(value = "/todo", method = RequestMethod.PUT,
         //    consumes = "application/json",
-            produces = "application/json")
+            produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public TODOPost changeStatus(@RequestParam("idToChange") Long idToChange) {
         List<TODOPost> allPosts = todoServiceDAO.findAll();

@@ -10,10 +10,10 @@ $(document).ready(function () {
                     '<td>' + task.datum + '</td>' +
                     '<td>' + task.whatTODO + '</td>' +
                     '<td class="status">' + task.doneStatus + '</td>' +
-                    '<td><form id="actionForm" >' +
+                    '<td>' +
                     '<button type="submit" class=' + task.id + ' id="change">Change status</button><br/>' +
                     '<button type="submit" class=' + task.id + ' id="delete"> Delete task </button><br/>' +
-                    '</form></td>' +
+                    '</td>' +
                     '</tr>';
                 $('#taskTable tbody').append(taskRow);
             });
@@ -37,9 +37,9 @@ $(document).ready(function () {
 });
 $('button').on('click', function () {
     var idd = $(event.target).attr('class');
-    console.log("Form id " + idd);
+    console.log("Button class " + idd);
     var buttonType = $(this).attr('id');
-    console.log(buttonType);
+    console.log("Button id "+buttonType);
 
     if (buttonType==='delete') {
         $.ajax({
@@ -51,7 +51,7 @@ $('button').on('click', function () {
                    console.log("Data to send "+data);
                },*/
             success: function (result/*, xhr*/) {
-                var rowToChange = $(event.target).closest("tr");
+                var rowToChange = $(event.target).closest('tr');
                // console.log(xhr.responseText);
                 rowToChange.remove();
                //  console.log(result.deleteResponse);
@@ -96,10 +96,10 @@ $('button').on('click', function () {
                     '<td>' + task.datum + '</td>' +
                     '<td>' + task.whatTODO + '</td>' +
                     '<td class="status">' + task.doneStatus + '</td>' +
-                    '<td><form id="actionForm" >' +
+                    '<td>' +
                     '<button type="submit" class=' + task.id + ' id="change">Change status</button><br/>' +
                     '<button type="submit" class=' + task.id + ' id="delete"> Delete task </button><br/>' +
-                    '</form></td>' +
+                    '</td>' +
                     '</tr>';
                 $('#taskTable tbody').append(taskRow);
             }
