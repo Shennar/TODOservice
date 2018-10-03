@@ -1,6 +1,6 @@
 package TODOservice.domain;
 
-import org.joda.time.DateTime;
+//import org.joda.time.DateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -42,13 +42,14 @@ public class TODOPost {
     public String getWhatTODO() {  return whatTODO;    }
 
     public void setWhatTODO(String whatTODO) {   this.whatTODO = whatTODO;    }
-/*
+
     @Override
     public String toString() {
-        return "TODO: " +
+        return "TODO: " +id+"\n" +
                 "When: " + datum +"\n" +
                 "What: " + whatTODO + "\n" +
-                "Status: "+(doneStatus?"Done\n":"Not done\n");
+                "Status: "+doneStatus+"\n" ;
+//(doneStatus?"Done\n":"Not done\n");
     }
-    */
+
 }

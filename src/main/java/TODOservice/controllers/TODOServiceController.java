@@ -25,6 +25,7 @@ public class TODOServiceController {
     @ResponseBody
     public List<TODOPost> getAllPosts() {
           List<TODOPost> allPosts = todoServiceDAO.findAll();
+        System.out.println("All posts listed");
       return allPosts;
     }
 
@@ -32,27 +33,31 @@ public class TODOServiceController {
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public TODOPost addTODOPost(@RequestBody @Valid TODOpostDTO post) {
+    public TODOPost addTODOPost(@RequestBody @Valid TODOPost post) {
+        System.out.println("Inside add...");
+        System.out.println(post);
         TODOPost postToAdd = new TODOPost();
         postToAdd.setWhatTODO(post.getWhatTODO());
         postToAdd.setDatum(post.getDatum());
         postToAdd.setDoneStatus(false);//(post.isDoneStatus());
+        System.out.println("Data assigned "+post);
         Long id = todoServiceDAO
                 .saveAndFlush(postToAdd)
                 .getId();
         postToAdd.setId(id);
+        System.out.println("Obtained id: "+id);
+
         return postToAdd;
     }
 
     @RequestMapping(value = "/todo", method = RequestMethod.DELETE,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
-           // consumes = "application/json")
+            produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public String deleteTODOPost(@RequestParam("idToDelete") Long idToDelete) {
         String deleteResponse="Booo!";
-           try {
+        try {
                todoServiceDAO.deleteById(idToDelete);
-           } catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e){
                deleteResponse+="Terrible failure!";
            }
             return deleteResponse;
@@ -60,12 +65,16 @@ public class TODOServiceController {
 
 
     @RequestMapping(value = "/todo", method = RequestMethod.PUT,
-        //    consumes = "application/json",
             produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public TODOPost changeStatus(@RequestParam("idToChange") Long idToChange) {
+    public TODOPost changeStatus(@RequestParam("idToChange") int idToChange) {
         List<TODOPost> allPosts = todoServiceDAO.findAll();
-        TODOPost post = allPosts.get(idToChange.intValue());
+        TODOPost post = new TODOPost();
+        for (TODOPost p : allPosts)
+            if (p.getId()==idToChange) {
+                post=p;
+                break;
+            }
         if (post.isDoneStatus()) post.setDoneStatus(false);
         else post.setDoneStatus(true);
         todoServiceDAO.saveAndFlush(post);

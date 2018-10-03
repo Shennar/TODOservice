@@ -10,25 +10,25 @@ public class TODOpostDTO {
 
     private String whatTODO;
 
-    private boolean doneStatus;
+    private String doneStatus;
 
     public TODOpostDTO(){}
-    public TODOpostDTO(Long id, String datum, String whatTODO, boolean doneStatus){
+    public TODOpostDTO(Long id, String datum, String whatTODO, String doneStatus){
         this.id=id;
         this.datum=datum;
         this.whatTODO=whatTODO;
         this.doneStatus=doneStatus;
     }
 
-    public boolean isDoneStatus() {  return doneStatus;   }
+    public String isDoneStatus() {  return doneStatus;   }
 
-    public void setDoneStatus(boolean doneStatus) { this.doneStatus = doneStatus;  }
+    public void setDoneStatus(String doneStatus) { this.doneStatus = doneStatus;  }
 
     public Long getId() { return id;  }
 
     public void setId(Long id) { this.id = id; }
 
-    public String getDatum() { return datum;    }
+    public String getDatum() { return datum; }
 
     public void setDatum(String dateTime) {  this.datum = dateTime;    }
 

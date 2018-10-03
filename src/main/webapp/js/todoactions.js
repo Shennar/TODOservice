@@ -18,92 +18,86 @@ $(document).ready(function () {
                 $('#taskTable tbody').append(taskRow);
             });
             var addRow = '<tr>' +
-                '<td><input type="text" id="datumAdd"></td>' +
-                '<td><input type="text" id="taskAdd"></td>' +
-                '<td ><input type="text" id="statusAdd"></td>' +
+                '<td><input type="text" id="datumAdd" ></td>' +
+                '<td><input type="text" id="taskAdd" ></td>' +
+                '<td><input type="text" id="statusAdd" ></td>' +
                 '<td>' +
-                '<button type="submit" class="addbutton" id="add"> Add task </button><br/>' +
+                '<button type="submit" class="addbutton" id="add"> Add task </button>' +
                 '</td>' +
                 '</tr>';
             $('#taskTable tfoot').append(addRow);
+            checkButton();
+            // $('#taskTable').ajax.reload();
         }
-        /*,
-        error: function (e) {
-            alert("ERROR: ", e);
-            console.log("ERROR: ", e);
-        }*/
     });
 
+
 });
-$('button').on('click', function () {
-    var idd = $(event.target).attr('class');
-    console.log("Button class " + idd);
-    var buttonType = $(this).attr('id');
-    console.log("Button id "+buttonType);
 
-    if (buttonType==='delete') {
-        $.ajax({
-            url: window.location + 'todo',
-            data: idToDelete = idd,
-            type: 'DELETE',
-            dataType: "json",
-            /*   beforeSend: function (data) {
-                   console.log("Data to send "+data);
-               },*/
-            success: function (result/*, xhr*/) {
-                var rowToChange = $(event.target).closest('tr');
-               // console.log(xhr.responseText);
-                rowToChange.remove();
-               //  console.log(result.deleteResponse);
-            },
-            error: function (result/*, xhr*/) {
-                var rowToChange = $(event.target).closest('tr');
-               // rowToChange.remove();
-               // console.log(xhr.responseText);
-            }
+function checkButton() {
+    $('button').on('click', function () {
+        var idd = $(event.target).attr('class');
+        var buttonType = $(this).attr('id');
 
-        })
+        if (buttonType === 'delete') {
+            $.ajax({
+                url: window.location + 'todo?idToDelete=' + idd,
+                type: 'DELETE',
+                dataType: 'json',
+                success: function () {
+                    event.preventDefault();
+                    var rowToChange = $(event.target).closest('tr');
+                    rowToChange.remove();
 
-    }
-    if (buttonType==='change') {
+                    //$(event.target).closest('tbody').reload(true);
+                }
+            });
+            $('#taskTable').ajax.reload();
+        }
 
-        $.ajax({
-            url: window.location + 'todo',
-            data: idToChange = idd,
-            type: 'UPDATE',
-            dataType: 'json',
-            success: function (data) {
-                var rowToChange = $(event.target).closest('tr');
-                rowToChange.$('.status').replaceWith('<td class="status">' + data.doneStatus + '</td>');
-                alert("Booo!");
-            }
-        })
-    }
-    if (buttonType==='add') {
-        console.log(buttonType);
-        var datum = $('#datumAdd').val();
-        var whatTODO = $('#taskAdd').val();
-        var doneStatus = $('#statusAdd').val();
-        var json = {"datum": datum, "whatTODO": whatTODO, "doneStatus": doneStatus};
-        console.log(json);
-        $.ajax({
-            url: window.location + 'todo',
-            data: json,
-            type: 'POST',
-            success: function (task) {
-                console.log(task);
-                var taskRow = '<tr>' +
-                    '<td>' + task.datum + '</td>' +
-                    '<td>' + task.whatTODO + '</td>' +
-                    '<td class="status">' + task.doneStatus + '</td>' +
-                    '<td>' +
-                    '<button type="submit" class=' + task.id + ' id="change">Change status</button><br/>' +
-                    '<button type="submit" class=' + task.id + ' id="delete"> Delete task </button><br/>' +
-                    '</td>' +
-                    '</tr>';
-                $('#taskTable tbody').append(taskRow);
-            }
-        });
-
-    }
-});
+        if (buttonType === 'change') {
+            $.ajax({
+                url: window.location + 'todo?idToChange=' + idd,
+                type: 'PUT',
+                dataType: 'json',
+                success: function (data) {
+                    event.preventDefault();
+                    var rowToChange = $(event.target).closest('tr');
+                    rowToChange.$('.status').replaceWith('<td class="status">' + data.doneStatus + '</td>');
+                   // $(event.target).closest('tbody').reload(true);
+                    $('#taskTable').reload();
+                }
+            });
+            $('#taskTable').ajax.reload();
+        }
+        if (buttonType === 'add') {
+            var datum = $('#datumAdd').val();
+            var whatTODO = $('#taskAdd').val();
+            var doneStatus = $('#statusAdd').val();
+            var addedTask = {"datum": datum, "whatTODO": whatTODO, "doneStatus": doneStatus};
+            console.log(addedTask);
+            $.ajax({
+                url: window.location + 'todo',
+                dataType: 'json',
+                data: addedTask,
+                type: 'POST',
+                success: function (task) {
+                    event.preventDefault();
+                    console.log(task);
+                    var taskRow = '<tr>' +
+                        '<td>' + task.datum + '</td>' +
+                        '<td>' + task.whatTODO + '</td>' +
+                        '<td class="status">' + task.doneStatus + '</td>' +
+                        '<td>' +
+                        '<button type="submit" class=' + task.id + ' id="change">Change status</button><br/>' +
+                        '<button type="submit" class=' + task.id + ' id="delete"> Delete task </button><br/>' +
+                        '</td>' +
+                        '</tr>';
+                    $('#taskTable tbody').append(taskRow);
+                   // $('#taskTable').reload();
+                }
+            });
+            $('#taskTable').ajax.reload();
+        }
+    });
+}

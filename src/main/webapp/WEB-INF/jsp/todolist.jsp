@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--@taglib prefix="form" uri="http://www.springframework.org/tags/form" --%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <head>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
