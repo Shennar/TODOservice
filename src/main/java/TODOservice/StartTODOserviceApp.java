@@ -20,5 +20,4 @@ public class StartTODOserviceApp extends SpringBootServletInitializer {
     public static void main(String[] args) throws Exception {
         SpringApplication.run(StartTODOserviceApp.class, args);
     }
-
 }

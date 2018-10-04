@@ -2,13 +2,11 @@ package TODOservice.controllers;
 
 import TODOservice.dao.TODOServiceDAO;
 import TODOservice.domain.TODOPost;
-import TODOservice.web.dto.TODOpostDTO;
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import java.lang.IllegalArgumentException;
-
-
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.util.List;
@@ -30,31 +28,25 @@ public class TODOServiceController {
     }
 
     @RequestMapping(value = "/todo", method = RequestMethod.POST,
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
+            produces = MediaType.APPLICATION_JSON_VALUE)
+
     @ResponseBody
-    public TODOPost addTODOPost(@RequestBody @Valid TODOPost post) {
-        System.out.println("Inside add...");
-        System.out.println(post);
+    public TODOPost addTODOPost(@Valid @RequestParam("datum") String datum, @Valid @RequestParam("whatTODO") String whatTODO,
+                                @Valid @RequestParam("doneStatus") String doneStatus) {
         TODOPost postToAdd = new TODOPost();
-        postToAdd.setWhatTODO(post.getWhatTODO());
-        postToAdd.setDatum(post.getDatum());
-        postToAdd.setDoneStatus(false);//(post.isDoneStatus());
-        System.out.println("Data assigned "+post);
+        postToAdd.setWhatTODO(whatTODO);
+        postToAdd.setDatum(datum);
+        postToAdd.setDoneStatus(false);
         Long id = todoServiceDAO
                 .saveAndFlush(postToAdd)
                 .getId();
         postToAdd.setId(id);
-        System.out.println("Obtained id: "+id);
-
         return postToAdd;
     }
 
-    @RequestMapping(value = "/todo", method = RequestMethod.DELETE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
+    @RequestMapping(value = "/todo", method = RequestMethod.DELETE)
     public String deleteTODOPost(@RequestParam("idToDelete") Long idToDelete) {
-        String deleteResponse="Booo!";
+        String deleteResponse="Booo";
         try {
                todoServiceDAO.deleteById(idToDelete);
         } catch (IllegalArgumentException e){
