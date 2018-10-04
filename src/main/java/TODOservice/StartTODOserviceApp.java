@@ -1,7 +1,6 @@
 package TODOservice;
+
 import TODOservice.dao.TODOServiceDAO;
-import TODOservice.domain.TODOPost;
-import org.joda.time.DateTime;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
