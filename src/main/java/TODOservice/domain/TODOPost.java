@@ -49,7 +49,6 @@ public class TODOPost {
                 "When: " + datum +"\n" +
                 "What: " + whatTODO + "\n" +
                 "Status: "+doneStatus+"\n" ;
-//(doneStatus?"Done\n":"Not done\n");
     }
 
 }

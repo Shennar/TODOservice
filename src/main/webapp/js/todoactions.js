@@ -20,7 +20,10 @@ $(document).ready(function () {
             var addRow = '<tr>' +
                 '<td><input type="datetime-local" id="datumAdd" required></td>' +
                 '<td><input type="text" id="taskAdd" required></td>' +
-                '<td><input type="text" id="statusAdd" required></td>' +
+                '<td><select  id="statusAdd">' +
+                '<option selected>TO DO</option>'+
+                '<option>Done</option>'+
+                '</select></td>' +
                 '<td>' +
                 '<button type="submit" class="add" id="addbutton"> Add task </button>' +
                 '</td>' +
@@ -44,8 +47,10 @@ function checkButton() {
             $.ajax({
                 url: window.location + 'todo?idToDelete=' + idd,
                 type: "DELETE",
-                success: function () {
+                dataType: "text",
+                success: function (r) {
                     rowToChange.remove();
+                    alert(r+idd);
                 }
             });
         }
@@ -54,9 +59,9 @@ function checkButton() {
             $.ajax({
                 url: window.location + 'todo?idToChange=' + idd,
                 type: "PUT",
-                dataType: "json",
-                success: function (data) {
-                    rowToChange.find('.status').replaceWith('<td class="status">' + data.doneStatus + '</td>');
+                dataType: "text",
+                success: function (r) {
+                    rowToChange.find('.status').replaceWith('<td class="status">' + r + '</td>');
                 }
             });
         }
