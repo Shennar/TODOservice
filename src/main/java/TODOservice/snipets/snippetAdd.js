@@ -1,32 +1,56 @@
-/*
-<c:forEach var="task" items="${TODOlist}">
-    <td>"${task.dateTime}"</td>
-    <td>"${task.whatTODO}"</td>
-    <td>"${task.status}"</td>
-    <td>
-    <a href="${pageContext.request.contextPath}/changestatus/${task.id}.json">Change status</a><br/>
-<a href="${pageContext.request.contextPath}/delete/${task.id}.json">Delete task</a>
-</td>
-</c:forEach>
 
+function validation() {
+    $('#datumAdd').on('input', function () {
+        var input = $(this);
+        var is_name = input.val();
+        if (is_name) {
+            input.removeClass("invalid").addClass("valid");
+        }
+        else {
+            input.removeClass("valid").addClass("invalid");
+        }
+    });
 
-<tfoot>
-<tr>
-<form:form id="addTask" action="/add.json" method="post">
-    <td><form:input type="text" path="dateTime" /></td>
-    <td><form:input type="text" path="$whatTODO"/></td>
-    <td>
-
-    <form:input type="boolean" path="status" /></td)
-    </td>
-    <td>
-    <!--   <a href="${pageContext.request.contextPath}/add.json">Add task</a><br/>
--->
-<input type="submit" value="Add task" />
-    </td>
-    </form:form>
-    </tr>
-    </tfoot>
-
-"${pageContext.request.contextPath}/todo/'
-*/
+    $('#taskAdd').keyup(function (event) {
+        var input = $(this);
+        var message = $(this).val();
+        //console.log(message);
+        if (message) {
+            input.removeClass("invalid").addClass("valid");
+        }
+        else {
+            input.removeClass("valid").addClass("invalid");
+        }
+    });
+    $("#addButton button").click(function (event) {
+        //var form_data=$("#contact").serializeArray();
+        var error_free_datum = true;
+        var element = $("#datumAdd");
+        var valid = element.hasClass("valid");
+        var error_element = $("span", element.parent());
+        if (!valid) {
+            error_element.removeClass("error").addClass("error_show");
+            error_free_datum = false;
+        }
+        else {
+            error_element.removeClass("error_show").addClass("error");
+        }
+        var error_free_task = true;
+        var element = $("#taskAdd");
+        var valid = element.hasClass("valid");
+        var error_element = $("span", element.parent());
+        if (!valid) {
+            error_element.removeClass("error").addClass("error_show");
+            error_free_task = false;
+        }
+        else {
+            error_element.removeClass("error_show").addClass("error");
+        }
+        if (!error_free_datum && !error_free_task) {
+            event.preventDefault();
+        }
+        else {
+            alert('No errors: Form will be submitted');
+        }
+    });
+}

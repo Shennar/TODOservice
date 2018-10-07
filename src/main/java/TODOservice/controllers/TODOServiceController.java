@@ -41,6 +41,8 @@ public class TODOServiceController {
     @ResponseBody
     public TODOPostDTO addTODOPost(@Valid @RequestParam("datum") String datum, @Valid @RequestParam("whatTODO") String whatTODO,
                                    @Valid @RequestParam("doneStatus") String doneStatus) {
+       /* String validationResult = validator(datum, whatTODO, doneStatus);
+        if (validationResult.length() !=0 ){*/
         TODOPostDTO postUI = new TODOPostDTO();
         TODOPost postToAdd = new TODOPost();
         postToAdd.setDatum(datum);
@@ -56,7 +58,9 @@ public class TODOServiceController {
         postUI.setDatum(datum);
         postUI.setDoneStatus(doneStatus);
         postUI.setWhatTODO(whatTODO);
-        return postUI;
+            return postUI;/*}
+        else validationResult="";
+        return new TODOPostDTO();*/
     }
 
     @RequestMapping(value = "/todo", method = RequestMethod.DELETE)
@@ -92,5 +96,15 @@ public class TODOServiceController {
         }
         todoServiceDAO.saveAndFlush(post);
         return postStatusForUI;
+    }
+    public String validator(String datum, String whatTODO, String doneStatus){
+        String errors="";
+        String fixedString=" field must be filled. \n ";
+        if (whatTODO.length() == 0 )errors+="Task"+fixedString;
+        if (doneStatus.length() == 0 )errors+="Status"+fixedString;
+        else if (!(doneStatus.equals("TO DO") || doneStatus.equals("Done")))
+            errors+="Only TODO or Done is allowed for Status.";
+        if (datum.length() == 0 )errors+="Date-time"+fixedString;
+        return errors;
     }
 }

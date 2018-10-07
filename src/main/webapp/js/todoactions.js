@@ -20,8 +20,10 @@ $(document).ready(function () {
             checkButton();
 
             var addRow = '<tr>' +
-                '<td><input type="datetime-local" id="datumAdd" required></td>' +
-                '<td><input type="text" id="taskAdd" required></td>' +
+                '<td><input type="datetime-local" id="datumAdd" name="datetime">' +
+                '<br/><span class="error">This field is required</span></td>' +
+                '<td><textarea id="taskAdd" name="tasktext"></textarea>' +
+                '<br/><span class="error">This field is required</span></td>' +
                 '<td><select  id="statusAdd">' +
                 '<option selected>TO DO</option>' +
                 '<option>Done</option>' +
@@ -34,6 +36,7 @@ $(document).ready(function () {
             addAction();
         }
     });
+
 });
 
 
