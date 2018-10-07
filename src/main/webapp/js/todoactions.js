@@ -5,11 +5,11 @@ $(document).ready(function () {
         url: window.location + 'todo',
         success: function (data) {
             $.each(data, function (index, task) {
-
                 var taskRow = '<tr>' +
                     '<td>' + task.datum + '</td>' +
                     '<td>' + task.whatTODO + '</td>' +
-                    '<td class="status">' + task.doneStatus + '</td>' +
+                    '<td class="status" style="' + statusColor(task.doneStatus) + '">' +
+                    task.doneStatus + '</td>' +
                     '<td>' +
                     '<button type="submit" class="change" id=' + task.id + '>Change status</button><br/>' +
                     '<button type="submit" class="delete" id=' + task.id + '> Delete task </button><br/>' +
@@ -17,28 +17,29 @@ $(document).ready(function () {
                     '</tr>';
                 $('#taskTable tbody').append(taskRow);
             });
+            checkButton();
+
             var addRow = '<tr>' +
                 '<td><input type="datetime-local" id="datumAdd" required></td>' +
                 '<td><input type="text" id="taskAdd" required></td>' +
                 '<td><select  id="statusAdd">' +
-                '<option selected>TO DO</option>'+
-                '<option>Done</option>'+
+                '<option selected>TO DO</option>' +
+                '<option>Done</option>' +
                 '</select></td>' +
                 '<td>' +
                 '<button type="submit" class="add" id="addbutton"> Add task </button>' +
                 '</td>' +
                 '</tr>';
             $('#taskTable tfoot').append(addRow);
-            checkButton();
+            addAction();
         }
     });
-
-
 });
+
 
 function checkButton() {
     $('button').on('click', function () {
-        var buttonClicked=  $(event.target);
+        var buttonClicked = $(event.target);
         var idd = buttonClicked.attr('id');
         var buttonType = buttonClicked.attr('class');
         var rowToChange = buttonClicked.closest('tr');
@@ -50,7 +51,7 @@ function checkButton() {
                 dataType: "text",
                 success: function (r) {
                     rowToChange.remove();
-                    alert(r+idd);
+                    alert(r + idd);
                 }
             });
         }
@@ -61,16 +62,25 @@ function checkButton() {
                 type: "PUT",
                 dataType: "text",
                 success: function (r) {
-                    rowToChange.find('.status').replaceWith('<td class="status">' + r + '</td>');
+                    rowToChange.find('.status').replaceWith('<td class="status" style="' +
+                        statusColor(r) + '">' + r + '</td>');
                 }
             });
         }
+
+    });
+}
+
+function addAction() {
+    $('button').on('click', function () {
+        var buttonClicked = $(event.target);
+        var buttonType = buttonClicked.attr('class');
+
         if (buttonType === 'add') {
             var datums = $('#datumAdd').val();
             var whatTODOs = $('#taskAdd').val();
             var doneStatuss = $('#statusAdd').val();
             var addedTask = {datum: datums, whatTODO: whatTODOs, doneStatus: doneStatuss};
-            console.log(addedTask);
             $.ajax({
                 url: window.location + 'todo',
                 dataType: "json",
@@ -81,10 +91,11 @@ function checkButton() {
                     var taskRow = '<tr>' +
                         '<td>' + task.datum + '</td>' +
                         '<td>' + task.whatTODO + '</td>' +
-                        '<td class="status">' + task.doneStatus + '</td>' +
+                        '<td class="status" style="' + statusColor(task.doneStatus) + '">' +
+                        task.doneStatus + '</td>' +
                         '<td>' +
                         '<button type="submit" class="change" id=' + task.id + '>Change status</button><br/>' +
-                        '<button type="submit" class="delete" id=' + task.id + '> Delete task </button><br/>'+
+                        '<button type="submit" class="delete" id=' + task.id + '> Delete task </button><br/>' +
                         '</td>' +
                         '</tr>';
                     $('#taskTable tbody').append(taskRow);
@@ -94,8 +105,15 @@ function checkButton() {
                     checkButton();
                 }
             });
-
         }
-        $('.taskTable tbody').reload();
     });
+}
+
+function statusColor(text) {
+    if (text === "Done") {
+        return "color:green";
+    }
+    else {
+        return "color:red";
+    }
 }

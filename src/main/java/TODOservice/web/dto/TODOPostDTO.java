@@ -1,9 +1,6 @@
 package TODOservice.web.dto;
 
-import org.joda.time.DateTime;
-
 public class TODOPostDTO {
-
 
 
     private Long id;
@@ -34,9 +31,7 @@ public class TODOPostDTO {
 
     public void setWhatTODO(String whatTODO) {   this.whatTODO = whatTODO;    }
 
-    public Long getId() {
-        return id;
-    }
+    public Long getId() {   return id;     }
 
     public void setId(Long id) {
         this.id = id;
