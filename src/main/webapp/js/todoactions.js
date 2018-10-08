@@ -21,9 +21,9 @@ $(document).ready(function () {
 
             var addRow = '<tr>' +
                 '<td><input type="datetime-local" id="datumAdd" name="datetime">' +
-                '<br/><span class="error">This field is required</span></td>' +
+                '</td>' +
                 '<td><textarea id="taskAdd" name="tasktext"></textarea>' +
-                '<br/><span class="error">This field is required</span></td>' +
+                '</td>' +
                 '<td><select  id="statusAdd">' +
                 '<option selected>TO DO</option>' +
                 '<option>Done</option>' +

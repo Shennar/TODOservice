@@ -54,3 +54,7 @@ function validation() {
         }
     });
 }
+
+/*
+<br/><span class="error">This field is required</span>
+ */
