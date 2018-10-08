@@ -53,8 +53,10 @@ function checkButton() {
                 type: "DELETE",
                 dataType: "text",
                 success: function (r) {
-                    rowToChange.remove();
-                    alert(r + idd);
+                    if (r !== "Impossible to delete task with ID: ") {
+                        rowToChange.remove();
+                        alert(r + idd);
+                    } else alert(r + idd);
                 }
             });
         }
@@ -65,8 +67,11 @@ function checkButton() {
                 type: "PUT",
                 dataType: "text",
                 success: function (r) {
-                    rowToChange.find('.status').replaceWith('<td class="status" style="' +
-                        statusColor(r) + '">' + r + '</td>');
+                    if (r !== "No such record in the database.") {
+
+                        rowToChange.find('.status').replaceWith('<td class="status" style="' +
+                            statusColor(r) + '">' + r + '</td>');
+                    } else alert(r);
                 }
             });
         }
@@ -90,6 +95,7 @@ function addAction() {
                 data: addedTask,
                 type: "POST",
                 success: function (task) {
+                    if (task.errors === ""){
                     console.log(task);
                     var taskRow = '<tr>' +
                         '<td>' + task.datum + '</td>' +
@@ -105,7 +111,8 @@ function addAction() {
                     $('#datumAdd').val("");
                     $('#taskAdd').val("");
                     $('#statusAdd').val("");
-                    checkButton();
+                    checkButton();}
+                    else alert(task.errors);
                 }
             });
         }
