@@ -95,7 +95,7 @@ function addAction() {
                 data: addedTask,
                 type: "POST",
                 success: function (task) {
-                    if (task.errors === ""){
+                    if (task.errors === 'OK'){
                     console.log(task);
                     var taskRow = '<tr>' +
                         '<td>' + task.datum + '</td>' +
