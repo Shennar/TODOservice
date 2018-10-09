@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 
 @Transactional
 @Repository
-public class TODOServiceDAOImpl {
+public class TodoServiceDaoImpl {
     @PersistenceContext
     private EntityManager entityManager;
 

@@ -1,6 +1,6 @@
 package TODOservice.web.dto;
 
-public class TODOPostDTO {
+public class TodoPostDto {
 
 
     private Long id;
@@ -11,8 +11,8 @@ public class TODOPostDTO {
 
     private String doneStatus;
 
-    public TODOPostDTO(){}
-    public TODOPostDTO(Long id, String datum, String whatTODO, String doneStatus){
+    public TodoPostDto(){}
+    public TodoPostDto(Long id, String datum, String whatTODO, String doneStatus){
         this.id=id;
         this.datum=datum;
         this.whatTODO=whatTODO;

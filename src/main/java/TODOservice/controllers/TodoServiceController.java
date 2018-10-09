@@ -1,36 +1,31 @@
 package TODOservice.controllers;
 
-import TODOservice.dao.TODOServiceDAO;
-import TODOservice.domain.TODOPost;
+import TODOservice.dao.TodoServiceDao;
+import TODOservice.domain.TodoPost;
 import TODOservice.services.TODOPostResponse;
-import TODOservice.web.dto.TODOPostDTO;
-import org.joda.time.DateTime;
+import TODOservice.web.dto.TodoPostDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.lang.IllegalArgumentException;
-import javax.transaction.Transactional;
-import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@Transactional
-public class TODOServiceController {
+public class TodoServiceController {
 
     @Autowired
-    private TODOServiceDAO todoServiceDAO;
+    private TodoServiceDao todoServiceDAO;
 
     @RequestMapping(value = "/todo", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
-    public List<TODOPostDTO> getAllPosts() {
-        List<TODOPost> allPosts = todoServiceDAO.findAll();
-        List<TODOPostDTO> allPostsUI = new ArrayList<>();
-        for (TODOPost p : allPosts) {
+    public List<TodoPostDto> getAllPosts() {
+        List<TodoPost> allPosts = todoServiceDAO.findAll();
+        List<TodoPostDto> allPostsUI = new ArrayList<>();
+        for (TodoPost p : allPosts) {
             String postUIStatus = "" + (p.isDoneStatus() ? "Done" : "TO DO");
-            TODOPostDTO postUI = new TODOPostDTO(p.getId(), p.getDatum(), p.getWhatTODO(), postUIStatus);
+            TodoPostDto postUI = new TodoPostDto(p.getId(), p.getDatum(), p.getWhatTODO(), postUIStatus);
             allPostsUI.add(postUI);
         }
         System.out.println("All posts listed");
@@ -39,25 +34,26 @@ public class TODOServiceController {
 
     @RequestMapping(value = "/todo", method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
-    public TODOPostResponse addTODOPost(@Valid @RequestParam("datum") String datum, @Valid @RequestParam("whatTODO") String whatTODO,
-                                        @Valid @RequestParam("doneStatus") String doneStatus) {
+    public TODOPostResponse addTODOPost(@RequestParam("datum") String datum, @RequestParam("whatTODO") String whatTODO,
+                                        @RequestParam("doneStatus") String doneStatus) {
         String validationResult = validator(datum, whatTODO, doneStatus);
         TODOPostResponse postUI;
-        if (validationResult.length() == 0) {
-            TODOPost postToAdd = new TODOPost();
-            postToAdd.setDatum(datum);
+        if (validationResult.isEmpty()) {
+            TodoPost postToAdd = new TodoPost();
+            postToAdd.setDatum(datum.replace('T', ' '));
             postToAdd.setWhatTODO(whatTODO);
-            if (doneStatus.equals("Done")) {
+            if ("Done".equals(doneStatus)) {
                 postToAdd.setDoneStatus(true);
             } else {
                 postToAdd.setDoneStatus(false);
             }
             postToAdd = todoServiceDAO.saveAndFlush(postToAdd);
             Long id = postToAdd.getId();
-            postUI = new TODOPostResponse(new TODOPostDTO(id, datum, whatTODO, doneStatus),
-                    "OK");
-        } else {postUI = new TODOPostResponse( new TODOPostDTO(), validationResult);}
+            postUI = new TODOPostResponse(new TodoPostDto(id, datum.replace('T', ' '),
+                    whatTODO, doneStatus), "OK");
+        } else {
+            postUI = new TODOPostResponse(new TodoPostDto(), validationResult);
+        }
         return postUI;
     }
 
@@ -76,11 +72,11 @@ public class TODOServiceController {
     @RequestMapping(value = "/todo", method = RequestMethod.PUT,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public String changeStatus(@RequestParam("idToChange") int idToChange) {
-        List<TODOPost> allPosts = todoServiceDAO.findAll();
+        List<TodoPost> allPosts = todoServiceDAO.findAll();
         String postStatusForUI = "";
-        TODOPost post = new TODOPost();
+        TodoPost post = new TodoPost();
         boolean postNotFound = true;
-        for (TODOPost p : allPosts) {
+        for (TodoPost p : allPosts) {
             if (p.getId() == idToChange) {
                 post = p;
                 postNotFound = false;
@@ -105,7 +101,7 @@ public class TODOServiceController {
         String fixedString = " field must be filled. \n ";
         if (whatTODO.length() == 0) errors += "Task" + fixedString;
         if (doneStatus.length() == 0) errors += "Status" + fixedString;
-        else if (!(doneStatus.equals("TO DO") || doneStatus.equals("Done")))
+        else if (!("TO DO".equals(doneStatus) || "Done".equals(doneStatus)))
             errors += "Only TODO or Done is allowed for Status. \n";
         if (datum.length() == 0) errors += "Date-time" + fixedString;
         return errors;

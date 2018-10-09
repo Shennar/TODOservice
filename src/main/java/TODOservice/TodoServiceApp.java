@@ -1,6 +1,5 @@
 package TODOservice;
 
-import TODOservice.dao.TODOServiceDAO;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -10,13 +9,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories
-public class StartTODOserviceApp extends SpringBootServletInitializer {
-    private TODOServiceDAO todoServiceDAO;
+public class TodoServiceApp extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(StartTODOserviceApp.class);
+        return application.sources(TodoServiceApp.class);
     }
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(StartTODOserviceApp.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(TodoServiceApp.class, args);
     }
 }

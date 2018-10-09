@@ -1,9 +1,9 @@
 package TODOservice.services;
 
-import TODOservice.web.dto.TODOPostDTO;
+import TODOservice.web.dto.TodoPostDto;
 
 public class TODOPostResponse {
-    public TODOPostResponse(TODOPostDTO post, String errors){
+    public TODOPostResponse(TodoPostDto post, String errors){
         id=post.getId();
         datum=post.getDatum();
         whatTODO=post.getWhatTODO();

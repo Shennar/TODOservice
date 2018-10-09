@@ -1,6 +1,5 @@
 package TODOservice.domain;
 
-import org.joda.time.DateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "todobase")
-public class TODOPost {
+public class TodoPost {
 
     @Id
     @Column (name = "id")

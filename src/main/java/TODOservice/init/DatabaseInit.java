@@ -1,7 +1,7 @@
 package TODOservice.init;
 
-import TODOservice.dao.TODOServiceDAO;
-import TODOservice.domain.TODOPost;
+import TODOservice.dao.TodoServiceDao;
+import TODOservice.domain.TodoPost;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -11,10 +11,10 @@ import org.joda.time.DateTime;
 
 @Component
 public class DatabaseInit implements ApplicationRunner {
-    private TODOServiceDAO todoServiceDAO;
+    private TodoServiceDao todoServiceDAO;
 
     @Autowired
-    public DatabaseInit(TODOServiceDAO todoServiceDAO) {
+    public DatabaseInit(TodoServiceDao todoServiceDAO) {
         this.todoServiceDAO = todoServiceDAO;
     }
 
@@ -23,15 +23,21 @@ public class DatabaseInit implements ApplicationRunner {
         long count = todoServiceDAO.count();
         if (count == 0) {
             for (int i = 0; i < 7; i++) {
-                TODOPost todoPost = new TODOPost();
-                todoPost.setDatum(DateTime.now().toString());
+                TodoPost todoPost = new TodoPost();
+                String dateString = DateTime.now().toString();
+                int index = dateString.indexOf(".");
+                String datum = dateString.substring(0, index - 3).replace('T', ' ');
+                todoPost.setDatum(datum);
                 todoPost.setWhatTODO("Do the exercise #" + (i + 1) + "!");
                 todoPost.setDoneStatus(false);
 
                 todoServiceDAO.save(todoPost);
             }
-            TODOPost todoPost = new TODOPost();
-            todoPost.setDatum(DateTime.now().toString());
+            TodoPost todoPost = new TodoPost();
+            String dateString = DateTime.now().toString();
+            int index = dateString.indexOf(".");
+            String datum = dateString.substring(0, index - 3).replace('T', ' ');
+            todoPost.setDatum(datum);
             todoPost.setWhatTODO("Do the exercise #" + 8 + "!");
             todoPost.setDoneStatus(false);
             todoServiceDAO.save(todoPost);
