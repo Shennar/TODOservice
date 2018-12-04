@@ -6,7 +6,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-
 @SpringBootApplication
 @EnableJpaRepositories
 public class TodoServiceApp extends SpringBootServletInitializer {
@@ -14,6 +13,7 @@ public class TodoServiceApp extends SpringBootServletInitializer {
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(TodoServiceApp.class);
     }
+
     public static void main(String[] args) {
         SpringApplication.run(TodoServiceApp.class, args);
     }

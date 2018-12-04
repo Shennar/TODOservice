@@ -1,6 +1,7 @@
 package TODOservice.dao;
 
 import org.springframework.stereotype.Repository;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
@@ -10,5 +11,4 @@ import javax.transaction.Transactional;
 public class TodoServiceDaoImpl {
     @PersistenceContext
     private EntityManager entityManager;
-
 }

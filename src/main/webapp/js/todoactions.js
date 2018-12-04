@@ -5,11 +5,12 @@ $(document).ready(function () {
         url: window.location + 'todo',
         success: function (data) {
             $.each(data, function (index, task) {
+                var doneStatus = (task.doneStatus == "true") ? "Done" : "TO DO";
                 var taskRow = '<tr>' +
                     '<td>' + task.datum + '</td>' +
                     '<td>' + task.whatTODO + '</td>' +
-                    '<td class="status" style="' + statusColor(task.doneStatus) + '">' +
-                    task.doneStatus + '</td>' +
+                    '<td class="status" style="' + statusColor(doneStatus) + '">' +
+                    doneStatus + '</td>' +
                     '<td>' +
                     '<button type="submit" class="change" id=' + task.id + '>Change status</button><br/>' +
                     '<button type="submit" class="delete" id=' + task.id + '> Delete task </button><br/>' +
@@ -66,13 +67,16 @@ function checkButton() {
                 url: window.location + 'todo?idToChange=' + idd,
                 type: "PUT",
                 dataType: "text",
+                statusCode:{404: alert("No such record in the database.")},
                 success: function (r) {
+                    var doneStatus = (r == "true") ? "Done" : "TO DO";
                     if (r !== "No such record in the database.") {
 
                         rowToChange.find('.status').replaceWith('<td class="status" style="' +
                             statusColor(r) + '">' + r + '</td>');
                     } else alert(r);
-                }
+                },
+                error: alert("No such record in the database."),
             });
         }
 
@@ -95,23 +99,24 @@ function addAction() {
                 data: addedTask,
                 type: "POST",
                 success: function (task) {
-                    if (task.errors === 'OK'){
-                    console.log(task);
-                    var taskRow = '<tr>' +
-                        '<td>' + task.datum + '</td>' +
-                        '<td>' + task.whatTODO + '</td>' +
-                        '<td class="status" style="' + statusColor(task.doneStatus) + '">' +
-                        task.doneStatus + '</td>' +
-                        '<td>' +
-                        '<button type="submit" class="change" id=' + task.id + '>Change status</button><br/>' +
-                        '<button type="submit" class="delete" id=' + task.id + '> Delete task </button><br/>' +
-                        '</td>' +
-                        '</tr>';
-                    $('#taskTable tbody').append(taskRow);
-                    $('#datumAdd').val("");
-                    $('#taskAdd').val("");
-                    $('#statusAdd').val("");
-                    checkButton();}
+                    if (task.errors === 'OK') {
+                        console.log(task);
+                        var taskRow = '<tr>' +
+                            '<td>' + task.datum + '</td>' +
+                            '<td>' + task.whatTODO + '</td>' +
+                            '<td class="status" style="' + statusColor(task.doneStatus) + '">' +
+                            task.doneStatus + '</td>' +
+                            '<td>' +
+                            '<button type="submit" class="change" id=' + task.id + '>Change status</button><br/>' +
+                            '<button type="submit" class="delete" id=' + task.id + '> Delete task </button><br/>' +
+                            '</td>' +
+                            '</tr>';
+                        $('#taskTable tbody').append(taskRow);
+                        $('#datumAdd').val("");
+                        $('#taskAdd').val("");
+                        $('#statusAdd').val("");
+                        checkButton();
+                    }
                     else alert(task.errors);
                 }
             });

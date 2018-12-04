@@ -2,14 +2,15 @@ package TODOservice.services;
 
 import TODOservice.web.dto.TodoPostDto;
 
-public class TODOPostResponse {
-    public TODOPostResponse(TodoPostDto post, String errors){
-        id=post.getId();
-        datum=post.getDatum();
-        whatTODO=post.getWhatTODO();
-        doneStatus=post.getDoneStatus();
-        this.errors=errors;
+public class TodoPostResponse {
+    public TodoPostResponse(TodoPostDto post, String errors) {
+        id = post.getId();
+        datum = post.getDatum();
+        whatTODO = post.getWhatTODO();
+        doneStatus = post.getDoneStatus();
+        this.errors = errors;
     }
+
     private Long id;
     private String datum;
     private String whatTODO;

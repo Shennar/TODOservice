@@ -2,12 +2,12 @@ package TODOservice.init;
 
 import TODOservice.dao.TodoServiceDao;
 import TODOservice.domain.TodoPost;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 import org.joda.time.DateTime;
-
 
 @Component
 public class DatabaseInit implements ApplicationRunner {
@@ -44,4 +44,3 @@ public class DatabaseInit implements ApplicationRunner {
         }
     }
 }
-
