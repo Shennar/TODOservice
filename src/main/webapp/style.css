@@ -1,0 +1,32 @@
+h1 {
+    color: #0000FF;
+    text-align: center;
+}
+
+table th {
+    color: #FF0000;
+}
+
+table {
+    width: auto;
+}
+table, table tr, table td, table th {
+    border-collapse: collapse;
+    text-align: center;
+    border: 2px solid darkblue;
+    padding: 5px;
+}
+
+.delete, .change, .add {
+    width: 120px;
+    height: 20px;
+    margin: 2px;
+}
+
+.delete {
+    background-color: red;
+}
+
+.add {
+    background-color: lightgreen;
+}
