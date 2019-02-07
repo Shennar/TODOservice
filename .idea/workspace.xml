@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9e86d94-f883-400a-8b84-58b13833512b" name="Default Changelist" comment="" />
+    <list default="true" id="d9e86d94-f883-400a-8b84-58b13833512b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +42,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-5" />
     <option name="y" value="1" />
-    <option name="width" value="1558" />
+    <option name="width" value="1394" />
     <option name="height" value="1043" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -103,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1549403092725</updated>
       <workItem from="1549403093927" duration="567000" />
-      <workItem from="1549563167521" duration="1352000" />
+      <workItem from="1549563167521" duration="1614000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1549564508616</created>
@@ -116,12 +118,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1919000" />
+    <option name="totallyTimeSpent" value="2181000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="1" width="1558" height="1043" extended-state="0" />
+    <frame x="-5" y="1" width="1394" height="1043" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23831776" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26761618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
