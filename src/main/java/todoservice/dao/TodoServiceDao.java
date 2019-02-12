@@ -1,6 +1,6 @@
-package TODOservice.dao;
+package todoservice.dao;
 
-import TODOservice.domain.TodoPost;
+import todoservice.domain.TodoPost;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

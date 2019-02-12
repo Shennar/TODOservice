@@ -1,4 +1,4 @@
-package TODOservice.web.dto;
+package todoservice.web.dto;
 
 public class TodoPostDto {
 

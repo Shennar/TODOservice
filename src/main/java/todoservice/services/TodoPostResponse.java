@@ -1,6 +1,6 @@
-package TODOservice.services;
+package todoservice.services;
 
-import TODOservice.web.dto.TodoPostDto;
+import todoservice.web.dto.TodoPostDto;
 
 public class TodoPostResponse {
     public TodoPostResponse(TodoPostDto post, String errors) {

@@ -1,4 +1,4 @@
-package TODOservice;
+package todoservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

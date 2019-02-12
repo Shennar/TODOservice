@@ -1,7 +1,7 @@
-package TODOservice.init;
+package todoservice.init;
 
-import TODOservice.dao.TodoServiceDao;
-import TODOservice.domain.TodoPost;
+import todoservice.dao.TodoServiceDao;
+import todoservice.domain.TodoPost;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -22,25 +22,16 @@ public class DatabaseInit implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         long count = todoServiceDAO.count();
         if (count == 0) {
-            for (int i = 0; i < 7; i++) {
+            for (int i = 0; i < 8; i++) {
                 TodoPost todoPost = new TodoPost();
                 String dateString = DateTime.now().toString();
-                int index = dateString.indexOf(".");
+                int index = dateString.indexOf('.');
                 String datum = dateString.substring(0, index - 3).replace('T', ' ');
                 todoPost.setDatum(datum);
                 todoPost.setWhatTODO("Do the exercise #" + (i + 1) + "!");
                 todoPost.setDoneStatus(false);
-
                 todoServiceDAO.save(todoPost);
             }
-            TodoPost todoPost = new TodoPost();
-            String dateString = DateTime.now().toString();
-            int index = dateString.indexOf(".");
-            String datum = dateString.substring(0, index - 3).replace('T', ' ');
-            todoPost.setDatum(datum);
-            todoPost.setWhatTODO("Do the exercise #" + 8 + "!");
-            todoPost.setDoneStatus(false);
-            todoServiceDAO.save(todoPost);
         }
     }
 }

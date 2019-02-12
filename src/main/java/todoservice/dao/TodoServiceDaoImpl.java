@@ -1,4 +1,4 @@
-package TODOservice.dao;
+package todoservice.dao;
 
 import org.springframework.stereotype.Repository;
 

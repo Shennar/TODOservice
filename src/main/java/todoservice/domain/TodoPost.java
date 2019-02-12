@@ -1,4 +1,4 @@
-package TODOservice.domain;
+package todoservice.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
