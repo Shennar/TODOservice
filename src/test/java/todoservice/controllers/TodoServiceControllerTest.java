@@ -12,7 +12,6 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
 public class TodoServiceControllerTest {
 
 //    private List<TodoPostDto> fakeDatabase;
@@ -26,7 +25,7 @@ public class TodoServiceControllerTest {
 
 //    @Before
 //    public void setUp() {
-//        createFakeDatabases();
+//        createFakeDatabase();
 //    }
 //
 //    @After
@@ -39,7 +38,7 @@ public class TodoServiceControllerTest {
     public void whenSentGetRequest_allPostsShown() {
        // when(todoServiceDaoMock.findAll()).thenReturn(fakeTodoServiceDAO.findAll());
         List<TodoPostDto> actualRecords = restController.getAllPosts();
-        final List<TodoPostDto> fakeDatabase = createFakeDatabases();
+        final List<TodoPostDto> fakeDatabase = createFakeDatabase();
         assertEquals(actualRecords, fakeDatabase);
     }
 
@@ -97,13 +96,11 @@ public class TodoServiceControllerTest {
     // Auxiliary methods
     //
 
-    private List<TodoPostDto> createFakeDatabases() {
+    private List<TodoPostDto> createFakeDatabase() {
         final List<TodoPostDto> fakeDatabase = new ArrayList<>();
         TodoPostDto postDto;
-//        TodoPost post;
         for (int i = 0; i < 5; i++) {
             postDto = new TodoPostDto(1L, "Fakedate" + (i + 1), "Task " + (i + 1), "false");
-            //  post = mapper.map(postDto, TodoPost.class);
             fakeDatabase.add(postDto);
         }
         return fakeDatabase;

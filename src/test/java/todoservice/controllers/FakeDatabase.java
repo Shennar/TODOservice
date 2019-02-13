@@ -5,7 +5,6 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Component;
 import todoservice.dao.TodoServiceDao;
 import todoservice.domain.TodoPost;
 import todoservice.web.dto.TodoPostDto;
@@ -14,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Component
 public class FakeDatabase implements TodoServiceDao {
 
     final private DozerBeanMapper mapper = new DozerBeanMapper();

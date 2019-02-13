@@ -1,12 +1,6 @@
 package todoservice.controllers;
 
-import org.springframework.stereotype.Component;
-import todoservice.dao.TodoServiceDao;
-import todoservice.domain.TodoPost;
-import todoservice.services.TodoPostResponse;
-import todoservice.web.dto.TodoPostDto;
 import org.dozer.DozerBeanMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -14,18 +8,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import todoservice.dao.TodoServiceDao;
+import todoservice.domain.TodoPost;
+import todoservice.services.TodoPostResponse;
+import todoservice.web.dto.TodoPostDto;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-//@Component
 @RequestMapping(value = "/todo", produces = MediaType.APPLICATION_JSON_VALUE)
 public class TodoServiceController {
 
     private TodoServiceDao todoServiceDAO;
 
-    public TodoServiceController(final TodoServiceDao todoServiceDao){
+    public TodoServiceController(final TodoServiceDao todoServiceDao) {
         this.todoServiceDAO = todoServiceDao;
     }
 
@@ -33,12 +30,10 @@ public class TodoServiceController {
     public List<TodoPostDto> getAllPosts() {
         final DozerBeanMapper mapper = new DozerBeanMapper();
         final List<TodoPostDto> allPostsUI = new ArrayList<>();
-//        final List<TodoPost> allRecords = todoServiceDAO.findAll();
         for (final TodoPost post : todoServiceDAO.findAll()) {
             final TodoPostDto postUI = mapper.map(post, TodoPostDto.class);
             allPostsUI.add(postUI);
         }
-        System.out.println("All posts listed");
         return allPostsUI;
     }
 
