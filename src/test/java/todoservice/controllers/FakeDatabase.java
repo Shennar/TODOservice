@@ -33,13 +33,16 @@ public class FakeDatabase implements TodoServiceDao {
     }
 
     @Override
-    public <S extends TodoPost> S saveAndFlush(S entity) {
+    public TodoPost saveAndFlush(final TodoPost entity) {
         final String datum = entity.getDatum();
         final String whatTodo = entity.getWhatTODO();
         final boolean doneStatus = entity.isDoneStatus();
-        final String doneString = "" + doneStatus;
-        final TodoPostDto postDto = new TodoPostDto(1L, datum, whatTodo, doneString);
-        return (S) mapper.map(postDto, TodoPost.class);
+        final TodoPost post = new TodoPost();
+        post.setId(1L);
+        post.setDatum(datum);
+        post.setWhatTODO(whatTodo);
+        post.setDoneStatus(doneStatus);
+        return post;
     }
 
     @Override
@@ -105,7 +108,7 @@ public class FakeDatabase implements TodoServiceDao {
         Long id;
         for (int i = 0; i < 5; i++) {
             id = Long.parseLong("" + i);
-            postDto = new TodoPostDto(id, "Fakedate" + (i + 1), "Task " + (i + 1), "false");
+            postDto = new TodoPostDto(id, "Fakedate" + (i + 1), "Task " + (i + 1), "Done");
             post = mapper.map(postDto, TodoPost.class);
             fakeDatabase.add(post);
         }

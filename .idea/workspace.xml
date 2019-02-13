@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9e86d94-f883-400a-8b84-58b13833512b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/todoservice/controllers/FakeDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/todoservice/controllers/TodoServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/todoservice/controllers/TodoServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/todoservice/dao/TodoServiceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/todoservice/dao/TodoServiceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/todoservice/dao/TodoServiceDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/todoservice/controllers/FakeDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/todoservice/controllers/FakeDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/todoservice/controllers/TodoServiceControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/todoservice/controllers/TodoServiceControllerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/controllers/TodoServiceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+            <state relative-caret-position="338">
+              <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/controllers/TodoServiceControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+            <state relative-caret-position="1425">
+              <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/controllers/FakeDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+            <state relative-caret-position="225">
+              <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#695#696#0" expanded="true" />
@@ -86,36 +83,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="163" column="43" lean-forward="true" selection-start-line="163" selection-start-column="43" selection-end-line="163" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/dao/TodoServiceDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state relative-caret-position="150">
+              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/web/dto/TodoPostDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-              <folding>
-                <element signature="e#750#751#0" expanded="true" />
-                <element signature="e#781#782#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,11 +135,11 @@
         <option value="$PROJECT_DIR$/src/test/java/todoservice/controllers/NewStory.story" />
         <option value="$PROJECT_DIR$/src/main/java/todoservice/init/DatabaseInit.java" />
         <option value="$PROJECT_DIR$/src/main/java/todoservice/dao/TodoServiceDaoImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/todoservice/dao/TodoServiceDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/todoservice/controllers/TodoServiceController.java" />
         <option value="$PROJECT_DIR$/src/test/java/todoservice/controllers/FakeDatabase.java" />
         <option value="$PROJECT_DIR$/src/test/java/todoservice/controllers/TodoServiceControllerTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/todoservice/controllers/TodoServiceController.java" />
       </list>
     </option>
   </component>
@@ -388,7 +362,7 @@
     <property name="ToolWindowR Graphics.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550089887126" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550092675544" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
@@ -421,7 +395,7 @@
     </option>
     <option name="contentProportion" value="0.23106061" />
   </component>
-  <component name="RunManager" selected="Spring Boot.TodoServiceApp">
+  <component name="RunManager" selected="JUnit.TodoServiceControllerTest">
     <configuration name="TodoServiceControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TODOservice" />
       <extension name="coverage">
@@ -433,6 +407,22 @@
       <option name="PACKAGE_NAME" value="todoservice.controllers" />
       <option name="MAIN_CLASS_NAME" value="todoservice.controllers.TodoServiceControllerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceControllerTest.whenCorrectDataSent_validatorReturnsNoErrors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TODOservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="todoservice.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="todoservice.controllers" />
+      <option name="MAIN_CLASS_NAME" value="todoservice.controllers.TodoServiceControllerTest" />
+      <option name="METHOD_NAME" value="whenCorrectDataSent_validatorReturnsNoErrors" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -468,31 +458,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="TODOservice [tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="tomcat7:run" />
-              </list>
-            </option>
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
     </configuration>
     <configuration name="TodoServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="TODOservice" />
@@ -571,11 +536,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.TodoServiceApp" />
-        <item itemvalue="Maven.TODOservice [tomcat7:run]" />
-        <item itemvalue="JUnit.TodoServiceControllerTest.whenSentGetRequest_allPostsShown" />
-        <item itemvalue="JUnit.TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" />
         <item itemvalue="JUnit.TodoServiceControllerTest" />
+        <item itemvalue="JUnit.TodoServiceControllerTest.whenCorrectDataSent_validatorReturnsNoErrors" />
+        <item itemvalue="JUnit.TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" />
+        <item itemvalue="JUnit.TodoServiceControllerTest.whenSentGetRequest_allPostsShown" />
+        <item itemvalue="Spring Boot.TodoServiceApp" />
       </list>
     </recent_temporary>
   </component>
@@ -599,7 +564,7 @@
       <workItem from="1549917350977" duration="4454000" />
       <workItem from="1550000853982" duration="6933000" />
       <workItem from="1550081127983" duration="7817000" />
-      <workItem from="1550090578164" duration="221000" />
+      <workItem from="1550090578164" duration="2024000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1549564508616</created>
@@ -622,43 +587,57 @@
       <option name="project" value="LOCAL" />
       <updated>1550001839079</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- some unit tests">
+      <created>1550090907895</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1550090907895</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- some unit tests">
+      <created>1550091230127</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1550091230127</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TodoServiceControllerTest_whenCorrectPostDataSent_returnNewPost - 2019.02.13 at 21h 46m 13s.xml">
-      <configuration name="TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TodoServiceControllerTest_whenCorrectPostDataSent_returnNewPost - 2019.02.13 at 21h 46m 32s.xml">
-      <configuration name="TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TodoServiceControllerTest_whenCorrectPostDataSent_returnNewPost - 2019.02.13 at 21h 49m 47s.xml">
-      <configuration name="TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TodoServiceControllerTest_whenCorrectPostDataSent_returnNewPost - 2019.02.13 at 21h 50m 36s.xml">
-      <configuration name="TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TodoServiceControllerTest_whenCorrectPostDataSent_returnNewPost - 2019.02.13 at 21h 51m 56s.xml">
-      <configuration name="TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TodoServiceControllerTest_whenSentGetRequest_allPostsShown - 2019.02.13 at 21h 56m 03s.xml">
+    <history-entry file="TodoServiceControllerTest_whenSentGetRequest_allPostsShown - 2019.02.13 at 22h 59m 02s.xml">
       <configuration name="TodoServiceControllerTest.whenSentGetRequest_allPostsShown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TodoServiceControllerTest_whenSentGetRequest_allPostsShown - 2019.02.13 at 21h 58m 06s.xml">
-      <configuration name="TodoServiceControllerTest.whenSentGetRequest_allPostsShown" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TodoServiceControllerTest_whenSentGetRequest_allPostsShown - 2019.02.13 at 21h 59m 59s.xml">
-      <configuration name="TodoServiceControllerTest.whenSentGetRequest_allPostsShown" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TodoServiceControllerTest_whenCorrectPostDataSent_returnNewPost - 2019.02.13 at 22h 10m 56s.xml">
+    <history-entry file="TodoServiceControllerTest_whenCorrectPostDataSent_returnNewPost - 2019.02.13 at 22h 59m 09s.xml">
       <configuration name="TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TodoServiceControllerTest_whenSentGetRequest_allPostsShown - 2019.02.13 at 22h 13m 28s.xml">
-      <configuration name="TodoServiceControllerTest.whenSentGetRequest_allPostsShown" configurationId="JUnit" />
+    <history-entry file="TodoServiceControllerTest_whenCorrectDataSent_validatorReturnsNoErrors - 2019.02.13 at 23h 01m 17s.xml">
+      <configuration name="TodoServiceControllerTest.whenCorrectDataSent_validatorReturnsNoErrors" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TodoServiceControllerTest_whenCorrectPostDataSent_returnNewPost - 2019.02.13 at 23h 02m 25s.xml">
+      <configuration name="TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TodoServiceControllerTest_whenCorrectDataSent_validatorReturnsNoErrors - 2019.02.13 at 23h 02m 33s.xml">
+      <configuration name="TodoServiceControllerTest.whenCorrectDataSent_validatorReturnsNoErrors" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TodoServiceControllerTest_whenCorrectDataSent_validatorReturnsNoErrors - 2019.02.13 at 23h 05m 19s.xml">
+      <configuration name="TodoServiceControllerTest.whenCorrectDataSent_validatorReturnsNoErrors" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TodoServiceControllerTest_whenCorrectPostDataSent_returnNewPost - 2019.02.13 at 23h 05m 26s.xml">
+      <configuration name="TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TodoServiceControllerTest_whenCorrectPostDataSent_returnNewPost - 2019.02.13 at 23h 05m 51s.xml">
+      <configuration name="TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TodoServiceControllerTest_whenCorrectPostDataSent_returnNewPost - 2019.02.13 at 23h 12m 05s.xml">
+      <configuration name="TodoServiceControllerTest.whenCorrectPostDataSent_returnNewPost" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TodoServiceControllerTest_whenCorrectDataSent_validatorReturnsNoErrors - 2019.02.13 at 23h 14m 01s.xml">
+      <configuration name="TodoServiceControllerTest.whenCorrectDataSent_validatorReturnsNoErrors" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40670000" />
+    <option name="totallyTimeSpent" value="42406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="1" width="1479" height="1043" extended-state="0" />
@@ -674,8 +653,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info id="simpleUML" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40989012" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40989012" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3989011" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -694,7 +673,7 @@
       <window_info anchor="bottom" id="SonarLint" order="18" sideWeight="0.49929577" weight="0.32967034" />
       <window_info anchor="bottom" id="Log4jMonitor" order="19" />
       <window_info anchor="bottom" id="SonarQube" order="20" weight="0.32967034" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="21" visible="true" weight="0.32967034" />
+      <window_info anchor="bottom" id="Run Dashboard" order="21" weight="0.32967034" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -762,19 +741,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="- Changed logic in TodoServiceController&#10;- Minor changes in js files&#10;- Added unit test files" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Changed logic in TodoServiceController&#10;- Minor changes in js files&#10;- Added unit test files" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/todoservice/controllers/TodoServiceController.java</url>
-          <line>61</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="- some unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="- some unit tests" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/META-INF/context.xml">
@@ -856,20 +824,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/dao/TodoServiceDaoImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/services/TodoPostResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/domain/TodoPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Iterable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -884,58 +838,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/controllers/TodoServiceController.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/controllers/TodoServiceControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/controllers/FakeDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/dao/TodoServiceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/web/dto/TodoPostDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-          <folding>
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#781#782#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="275">
+          <caret line="163" column="43" lean-forward="true" selection-start-line="163" selection-start-column="43" selection-end-line="163" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -950,11 +857,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/web/dto/TodoPostDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="163" column="43" lean-forward="true" selection-start-line="163" selection-start-column="43" selection-end-line="163" selection-end-column="43" />
+        <state relative-caret-position="250">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/dao/TodoServiceDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/services/TodoPostResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-511">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/domain/TodoPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/controllers/TodoServiceControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/controllers/FakeDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/controllers/TodoServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

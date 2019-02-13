@@ -14,29 +14,17 @@ import static org.junit.Assert.assertEquals;
 
 public class TodoServiceControllerTest {
 
-//    private List<TodoPostDto> fakeDatabase;
-
     final private DozerBeanMapper mapper = new DozerBeanMapper();
 
     @Autowired
-    private FakeDatabase fakeTodoServiceDAO;// = new FakeDatabase();
+    private FakeDatabase fakeTodoServiceDAO;
 
     private TodoServiceController restController = new TodoServiceController(fakeTodoServiceDAO);
 
-//    @Before
-//    public void setUp() {
-//        createFakeDatabase();
-//    }
-//
-//    @After
-//    public void tearDown() {
-//        fakeDatabase = null;
-//    }
-
-    @Ignore
+//    @Ignore
     @Test
     public void whenSentGetRequest_allPostsShown() {
-       // when(todoServiceDaoMock.findAll()).thenReturn(fakeTodoServiceDAO.findAll());
+        // when(todoServiceDaoMock.findAll()).thenReturn(fakeTodoServiceDAO.findAll());
         List<TodoPostDto> actualRecords = restController.getAllPosts();
         final List<TodoPostDto> fakeDatabase = createFakeDatabase();
         assertEquals(actualRecords, fakeDatabase);
@@ -44,17 +32,16 @@ public class TodoServiceControllerTest {
 
     @Test
     public void whenCorrectPostDataSent_returnNewPost() {
-        final TodoPostDto postDto = new TodoPostDto(1L, "Datum", "whatTODO", "false");
+        final TodoPostDto postDto = new TodoPostDto(1L, "Datum", "whatTODO", "Done");
         final TodoPostResponse expectedResponse = new TodoPostResponse(postDto, "OK");
-//        final TodoPost post = mapper.map(postDto, TodoPost.class);
-  //      when(todoServiceDaoMock.saveAndFlush(any(TodoPost.class))).thenReturn(mapper.map(postDto, TodoPost.class));
-        final TodoPostResponse createdResponse = restController.addTodoPost("Datum", "whatTODO", "false");
+        final TodoPostResponse createdResponse = restController.addTodoPost("Datum", "whatTODO", "Done");
         assertEquals(expectedResponse, createdResponse);
     }
 
     @Test
     public void whenCorrectDataSent_validatorReturnsNoErrors() {
-
+        final TodoPostResponse createdResponse = restController.addTodoPost("Datum", "whatTODO", "Done");
+        assertEquals("OK", createdResponse.getErrors());
     }
 
     @Test

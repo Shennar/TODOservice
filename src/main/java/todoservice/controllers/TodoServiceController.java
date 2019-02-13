@@ -99,7 +99,7 @@ public class TodoServiceController {
         if (whatTODO.length() == 0) errors += "Task" + fixedString;
         if (doneStatus.length() == 0) errors += "Status" + fixedString;
         else if (!("TO DO".equals(doneStatus) || "Done".equals(doneStatus)))
-            errors += "Only TODO or Done is allowed for Status. \n";
+            errors += "Only TO DO or Done is allowed for Status. \n";
         if (datum.length() == 0) errors += "Date-time" + fixedString;
         return errors;
     }
