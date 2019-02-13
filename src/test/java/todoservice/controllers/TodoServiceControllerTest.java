@@ -1,53 +1,56 @@
 package todoservice.controllers;
 
 import org.dozer.DozerBeanMapper;
-import org.junit.After;
-import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import todoservice.dao.TodoServiceDao;
-import todoservice.domain.TodoPost;
+import todoservice.services.TodoPostResponse;
 import todoservice.web.dto.TodoPostDto;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.when;
 
+//@RunWith(SpringJUnit4ClassRunner.class)
 public class TodoServiceControllerTest {
 
-    private List<TodoPost> fakeDatabase;
+//    private List<TodoPostDto> fakeDatabase;
+
     final private DozerBeanMapper mapper = new DozerBeanMapper();
 
     @Autowired
-    private TodoServiceDao todoServiceDAO;
+    private FakeDatabase fakeTodoServiceDAO;// = new FakeDatabase();
 
-    @Autowired
-    TodoServiceController restController;
+    private TodoServiceController restController = new TodoServiceController(fakeTodoServiceDAO);
 
+//    @Before
+//    public void setUp() {
+//        createFakeDatabases();
+//    }
+//
+//    @After
+//    public void tearDown() {
+//        fakeDatabase = null;
+//    }
 
-
-    @Before
-    public void setUp() {
-        createFakeDatabase();
-    }
-
-    @After
-    public void tearDown() {
-        fakeDatabase = null;
-    }
-
+    @Ignore
     @Test
     public void whenSentGetRequest_allPostsShown() {
-        when(todoServiceDAO.findAll()).thenReturn(fakeDatabase);
-        List<TodoPostDto> expectedRecords = restController.getAllPosts();
-        assertEquals(expectedRecords, fakeDatabase);
+       // when(todoServiceDaoMock.findAll()).thenReturn(fakeTodoServiceDAO.findAll());
+        List<TodoPostDto> actualRecords = restController.getAllPosts();
+        final List<TodoPostDto> fakeDatabase = createFakeDatabases();
+        assertEquals(actualRecords, fakeDatabase);
     }
 
     @Test
     public void whenCorrectPostDataSent_returnNewPost() {
-
+        final TodoPostDto postDto = new TodoPostDto(1L, "Datum", "whatTODO", "false");
+        final TodoPostResponse expectedResponse = new TodoPostResponse(postDto, "OK");
+//        final TodoPost post = mapper.map(postDto, TodoPost.class);
+  //      when(todoServiceDaoMock.saveAndFlush(any(TodoPost.class))).thenReturn(mapper.map(postDto, TodoPost.class));
+        final TodoPostResponse createdResponse = restController.addTodoPost("Datum", "whatTODO", "false");
+        assertEquals(expectedResponse, createdResponse);
     }
 
     @Test
@@ -94,10 +97,15 @@ public class TodoServiceControllerTest {
     // Auxiliary methods
     //
 
-    private void createFakeDatabase() {
-        fakeDatabase = new ArrayList<>();
-//             fakeDatabase.add(new TodoPost(1L, "Fakedate1", "Task 1", false));
-//        use mapper, create 2 lists;
+    private List<TodoPostDto> createFakeDatabases() {
+        final List<TodoPostDto> fakeDatabase = new ArrayList<>();
+        TodoPostDto postDto;
+//        TodoPost post;
+        for (int i = 0; i < 5; i++) {
+            postDto = new TodoPostDto(1L, "Fakedate" + (i + 1), "Task " + (i + 1), "false");
+            //  post = mapper.map(postDto, TodoPost.class);
+            fakeDatabase.add(postDto);
+        }
+        return fakeDatabase;
     }
-
 }

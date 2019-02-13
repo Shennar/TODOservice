@@ -1,5 +1,6 @@
 package todoservice.controllers;
 
+import org.springframework.stereotype.Component;
 import todoservice.dao.TodoServiceDao;
 import todoservice.domain.TodoPost;
 import todoservice.services.TodoPostResponse;
@@ -18,16 +19,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+//@Component
 @RequestMapping(value = "/todo", produces = MediaType.APPLICATION_JSON_VALUE)
 public class TodoServiceController {
 
-    @Autowired
     private TodoServiceDao todoServiceDAO;
+
+    public TodoServiceController(final TodoServiceDao todoServiceDao){
+        this.todoServiceDAO = todoServiceDao;
+    }
 
     @RequestMapping(method = RequestMethod.GET)
     public List<TodoPostDto> getAllPosts() {
         final DozerBeanMapper mapper = new DozerBeanMapper();
         final List<TodoPostDto> allPostsUI = new ArrayList<>();
+//        final List<TodoPost> allRecords = todoServiceDAO.findAll();
         for (final TodoPost post : todoServiceDAO.findAll()) {
             final TodoPostDto postUI = mapper.map(post, TodoPostDto.class);
             allPostsUI.add(postUI);
