@@ -18,6 +18,41 @@ public class FakeDatabase implements TodoServiceDao {
     final private DozerBeanMapper mapper = new DozerBeanMapper();
 
     @Override
+    public TodoPost saveAndFlush(final TodoPost entity) {
+        final String datum = entity.getDatum();
+        final String whatTodo = entity.getWhatTODO();
+        final boolean doneStatus = entity.isDoneStatus();
+        final TodoPost post = new TodoPost();
+        post.setId(1L);
+        post.setDatum(datum);
+        post.setWhatTODO(whatTodo);
+        post.setDoneStatus(doneStatus);
+        return post;
+    }
+
+    @Override
+    public List<TodoPost> findAll() {
+        List<TodoPost> fakeDatabase = new ArrayList<>();
+        TodoPostDto postDto;
+        TodoPost post;
+        Long id;
+        for (int i = 0; i < 5; i++) {
+            id = Long.parseLong("" + i);
+            postDto = new TodoPostDto(id, "Fakedate" + (i + 1), "Task " + (i + 1), "Done");
+            post = mapper.map(postDto, TodoPost.class);
+            fakeDatabase.add(post);
+        }
+        return fakeDatabase;
+    }
+
+    @Override
+    public void deleteById(final Long id) {
+        if (id < 0) {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    @Override
     public <S extends TodoPost> S save(S entity) {
         return null;
     }
@@ -30,19 +65,6 @@ public class FakeDatabase implements TodoServiceDao {
     @Override
     public void flush() {
 
-    }
-
-    @Override
-    public TodoPost saveAndFlush(final TodoPost entity) {
-        final String datum = entity.getDatum();
-        final String whatTodo = entity.getWhatTODO();
-        final boolean doneStatus = entity.isDoneStatus();
-        final TodoPost post = new TodoPost();
-        post.setId(1L);
-        post.setDatum(datum);
-        post.setWhatTODO(whatTodo);
-        post.setDoneStatus(doneStatus);
-        return post;
     }
 
     @Override
@@ -101,21 +123,6 @@ public class FakeDatabase implements TodoServiceDao {
     }
 
     @Override
-    public List<TodoPost> findAll() {
-        List<TodoPost> fakeDatabase = new ArrayList<>();
-        TodoPostDto postDto;
-        TodoPost post;
-        Long id;
-        for (int i = 0; i < 5; i++) {
-            id = Long.parseLong("" + i);
-            postDto = new TodoPostDto(id, "Fakedate" + (i + 1), "Task " + (i + 1), "Done");
-            post = mapper.map(postDto, TodoPost.class);
-            fakeDatabase.add(post);
-        }
-        return fakeDatabase;
-    }
-
-    @Override
     public List<TodoPost> findAll(Sort sort) {
         return null;
     }
@@ -133,11 +140,6 @@ public class FakeDatabase implements TodoServiceDao {
     @Override
     public long count() {
         return 0;
-    }
-
-    @Override
-    public void deleteById(Long aLong) {
-
     }
 
     @Override

@@ -13,7 +13,7 @@ public class ContextConfig {
     }
 
     @Bean
-    public TodoServiceController todoServiceController(final FakeDatabase db) {
-        return new TodoServiceController(db);
+    public TodoServiceController todoServiceController(final FakeDatabase dataBase) {
+        return new TodoServiceController(dataBase);
     }
 }

@@ -4,6 +4,8 @@ import org.dozer.DozerBeanMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import todoservice.services.TodoPostResponse;
@@ -20,6 +22,7 @@ import static org.junit.Assert.assertEquals;
 @ContextConfiguration(classes = ContextConfig.class)
 public class TodoServiceControllerTest {
 
+    private String ERROR_MESSAGE_LAST_PART = " field must be filled. \n ";
     final private DozerBeanMapper mapper = new DozerBeanMapper();
 
     @Autowired
@@ -51,37 +54,46 @@ public class TodoServiceControllerTest {
 
     @Test
     public void whenDatumMissed_validatorReturnsCorrectError() {
-
+        final TodoPostResponse createdResponse = restController.addTodoPost("", "whatTODO", "Done");
+        assertEquals("Date-time" + ERROR_MESSAGE_LAST_PART, createdResponse.getErrors());
     }
 
     @Test
     public void whenWhatTODOMissed_validatorReturnsCorrectError() {
-
+        final TodoPostResponse createdResponse = restController.addTodoPost("Datum", "", "Done");
+        assertEquals("Task" + ERROR_MESSAGE_LAST_PART, createdResponse.getErrors());
     }
 
     @Test
     public void whenDoneStatusMissed_validatorReturnsCorrectError() {
-
+        final TodoPostResponse createdResponse = restController.addTodoPost("Datum", "whatTODO", "Bla");
+        assertEquals("Only TO DO or Done is allowed for Status. \n", createdResponse.getErrors());
     }
 
     @Test
-    public void whenCorrectIdSentToDelete_recordDeleted() {
-
+    public void whenCorrectIdSentToDelete_returnedStatus200() {
+        final ResponseEntity<String> createdResponse = restController.deleteTodoPost(1L);
+        assertEquals("Successfully deleted task with ID: ", createdResponse.getBody());
+        assertEquals(HttpStatus.OK, createdResponse.getStatusCode());
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void whenIncorrectIdSentToDelete_exceptionThrown() {
-
+    @Test
+    public void whenIncorrectIdSentToDelete_returnedStatus500() {
+        final ResponseEntity<String> createdResponse = restController.deleteTodoPost(-1L);
+        assertEquals("", createdResponse.getBody());
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, createdResponse.getStatusCode());
     }
 
     @Test
     public void whenCorrectIdSentToChangeStatus_HttpStatus200Returned() {
-
+        final ResponseEntity<String> createdResponse = restController.changeStatus(1);
+        assertEquals(HttpStatus.OK, createdResponse.getStatusCode());
     }
 
     @Test
     public void whenIncorrectIdSentToChangeStatus_HttpStatus404Returned() {
-
+        final ResponseEntity<String> createdResponse = restController.changeStatus(10);
+        assertEquals(HttpStatus.NOT_FOUND, createdResponse.getStatusCode());
     }
 
     //
