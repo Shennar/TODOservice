@@ -1,10 +1,14 @@
 package todoservice.controllers;
 
 import org.dozer.DozerBeanMapper;
-import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import todoservice.services.TodoPostResponse;
+import todoservice.utils.ContextConfig;
+import todoservice.utils.FakeDatabase;
 import todoservice.web.dto.TodoPostDto;
 
 import java.util.ArrayList;
@@ -12,6 +16,8 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = ContextConfig.class)
 public class TodoServiceControllerTest {
 
     final private DozerBeanMapper mapper = new DozerBeanMapper();
@@ -19,12 +25,11 @@ public class TodoServiceControllerTest {
     @Autowired
     private FakeDatabase fakeTodoServiceDAO;
 
-    private TodoServiceController restController = new TodoServiceController(fakeTodoServiceDAO);
+    @Autowired
+    private TodoServiceController restController;
 
-//    @Ignore
     @Test
     public void whenSentGetRequest_allPostsShown() {
-        // when(todoServiceDaoMock.findAll()).thenReturn(fakeTodoServiceDAO.findAll());
         List<TodoPostDto> actualRecords = restController.getAllPosts();
         final List<TodoPostDto> fakeDatabase = createFakeDatabase();
         assertEquals(actualRecords, fakeDatabase);
