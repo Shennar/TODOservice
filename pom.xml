@@ -141,6 +141,15 @@
             <version>5.3.6.Final</version>
         </dependency>
 
+        <!-- H2 database for integration tests -->
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.197</version>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- Entity Validation -->
         <dependency>
             <groupId>org.hibernate.validator</groupId>
