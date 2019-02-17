@@ -1,0 +1,5 @@
+
+ksquid:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ßƒµ¢şÿÿÿÿ8—ÏÃÃ-
+osquid:S4488"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(àÌêûùÿÿÿÿ8—ÏÃÃ-
+dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Æøîç8—ÏÃÃ-
+dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.PUT)" with "@PutMapping"(›¼¹8—ÏÃÃ-

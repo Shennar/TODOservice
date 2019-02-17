@@ -1,0 +1,112 @@
+
+8todoservice.domain.TodoPost#toString()Ljava/lang/String;
+__unknown_file ("1*×
+1T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> >(ž
+›
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> >(
+%0java.lang.Long"__id*'*%
+todoservice.domain.TodoPost"
+idŸ
+œ
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> >(
+%1java.lang.String"__concat*
+
+TODO: *
+
+%0java.lang.Long
+š
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> >(#
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+\n¡
+ž
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> ?(
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+
+When: £
+ 
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java? ?( 
+%4java.lang.String"__id***(
+todoservice.domain.TodoPost"
+datum¯
+¬
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> ?( 
+%5java.lang.String"__concat*
+
+%3java.lang.String*
+
+%4java.lang.String
+š
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> ?('
+%6java.lang.String"__concat*
+
+%5java.lang.String*
+\n¡
+ž
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> @(
+%7java.lang.String"__concat*
+
+%6java.lang.String*
+
+What: ¦
+£
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java@ @(#
+%8java.lang.String"__id*-*+
+todoservice.domain.TodoPost"
+
+whatTODO¯
+¬
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> @(#
+%9java.lang.String"__concat*
+
+%7java.lang.String*
+
+%8java.lang.Stringž
+›
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> @(*
+%10java.lang.String"__concat*
+
+%9java.lang.String*
+\n¥
+¢
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> A(
+%11java.lang.String"__concat*
+
+%10java.lang.String*
+
+Status: Ÿ
+œ
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> A('
+%12java.lang.String"__concat*
+
+%11java.lang.String*
+""Ÿ
+œ
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> A(.
+%13java.lang.String"__concat*
+
+%12java.lang.String*
+\n"q
+T
+JD:\JavaProjects\TODOservice\src\main\java\todoservice\domain\TodoPost.java> A(/
+
+%13java.lang.StringB
+todoservice.domain.TodoPost

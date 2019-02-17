@@ -1,0 +1,4 @@
+
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¤µÁ·ùÿÿÿÿ
+bsquid:S3027"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(™ÅØ³ÿÿÿÿÿ
+bsquid:S3027&"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(™ÅØ³ÿÿÿÿÿ

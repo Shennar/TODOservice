@@ -1,10 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9e86d94-f883-400a-8b84-58b13833512b" name="Default Changelist" comment="- all unit tests done and passed">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test.properties" afterDir="false" />
+    <list default="true" id="d9e86d94-f883-400a-8b84-58b13833512b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/03793a545750b62e71f97fbde063d7fca6d564af" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/06f65155ec73600b9fc5c4dc2883d4bb84d8e284" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f68f503c6ced5bd73192ba929295ef628ff1c70" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/146ca07af720bc6de7004f36a89c7fbc2861689c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15987307693bd0cb3247aaa5895dbc92af7d6c46" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/21637f90a96da481cd4e697605856401d7932afb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/8/281d8ff5ad5e88e8baef79af894c9f59e83a98f7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/4488f32eef2e0e74a0818662dfc771649eee28e4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/44f546ac270f1414b604a2fcb988e304ff10e97e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/5384c3966e9b89e9d4d3a028e4ca11f706466a7d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/638b8d4e6fa2d488c9f96ccf157cab90778c441a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f01e312db44b238e22a450303364dcf0f54be89" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d237a607ebec7a547a2294ce63046d5894ca663" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/89020986e17488601199220abb6c28634a68fb10" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8add5d7a7ef4a24b6b83040ff5d20da7a9844cc8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b09e5b8458086d8426004cc038bc161f2b4f5bdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b5ddf58625eb7ca70f6133d70f13d616e61eadd7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cb9cc2ad020f6d5c28d3dd3edf284dbab0aca714" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cc1d272701e3866254567295044fca93ae84824a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/ce72deac22425af35c433583776976e8d6b69eaf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/7/d7a5a1399cf39d136df18a83aab392ca83d7f807" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/dfd94c00ba5d9cfe645fa4bc1a24056ad67abee4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/c/ec0672ba83eedfab37a8dd3a471442abe489ab01" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/.css/coverage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/.img/arrowDown.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/.img/arrowUp.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/.classes/TodoServiceController.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/.classes/WebController.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.controllers/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.dao/.classes/TodoServiceDao.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.dao/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.dao/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.dao/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.dao/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.dao/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.dao/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.dao/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.dao/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.dao/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.dao/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.domain/.classes/TodoPost.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.domain/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.domain/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.domain/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.domain/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.domain/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.domain/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.domain/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.domain/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.domain/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.domain/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.init/.classes/DatabaseInit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.init/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.init/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.init/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.init/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.init/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.init/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.init/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.init/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.init/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.init/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.services/.classes/TodoPostResponse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.services/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.services/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.services/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.services/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.services/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.services/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.services/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.services/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.services/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.services/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.web.dto/.classes/TodoPostDto.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.web.dto/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.web.dto/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.web.dto/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.web.dto/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.web.dto/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.web.dto/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.web.dto/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.web.dto/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.web.dto/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice.web.dto/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice/.classes/TodoServiceApp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeCoverage/todoservice/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/TODOservice.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/todoservice/TodoServiceApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/todoservice/controllers/TodoServiceController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/todoservice/controllers/WebController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/todoservice/dao/TodoServiceDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/todoservice/domain/TodoPost.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/todoservice/init/DatabaseInit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/todoservice/services/TodoPostResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/todoservice/web/dto/TodoPostDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/.sonar_lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/report-task.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/types.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_0.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_1.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_10.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_11.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_12.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_13.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_14.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_15.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_16.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_17.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_18.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_19.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_2.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_20.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_21.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_22.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_23.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_24.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_25.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_26.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_27.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_28.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_29.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_3.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_30.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_31.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_32.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_33.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_34.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_35.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_36.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_37.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_38.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_39.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_4.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_40.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_41.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_42.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_5.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_6.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_7.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_8.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/sonar/ucfg2/java/ucfg_9.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/META-INF/TODOservice.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/todoservice/controllers/TodoServiceControllerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/todoservice/init/DatabaseInitTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/todoservice/init/SimpleSteps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/todoservice/utils/ContextConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/todoservice/utils/FakeDatabase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,14 +227,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/controllers/TodoServiceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="675">
               <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/integrationtests/DatabaseTest.story">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/init/SimpleSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -71,7 +270,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/resources/test.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -79,7 +278,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/init/DatabaseInit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="250">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -91,7 +290,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/utils/FakeDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
+            <state relative-caret-position="175">
               <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -231,8 +430,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -387,6 +584,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -399,7 +598,7 @@
     <property name="ToolWindowR Graphics.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550424315844" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550437270882" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CodeCoverage" />
     <property name="settings.editor.selected.configurable" value="projectSettingsConfigurable" />
   </component>
@@ -510,7 +709,6 @@
                 <option value="-Dsonar.organization=shennar-github" />
                 <option value="-Dsonar.host.url=https://sonarcloud.io" />
                 <option value="-Dsonar.login=38ec8a91aaa6a3c3d36ccf7c8daf6b5294a8c270" />
-                <option value="-Dsonar.branch.name=TODOservice" />
               </list>
             </option>
             <option name="pomFileName" />
@@ -602,18 +800,18 @@
     <list>
       <item itemvalue="JUnit.DatabaseInitTest" />
       <item itemvalue="JUnit.DatabaseInitTest.whenDatabaseIsEmpty_createNewData" />
+      <item itemvalue="Maven.Sonar" />
       <item itemvalue="JUnit.DatabaseInitTest.whenDatabaseNotEmpty_DoNotAddData" />
       <item itemvalue="JUnit.todoservice in TODOservice" />
-      <item itemvalue="Maven.Sonar" />
       <item itemvalue="Spring Boot.TodoServiceApp" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.TodoServiceApp" />
         <item itemvalue="JUnit.todoservice in TODOservice" />
-        <item itemvalue="JUnit.DatabaseInitTest" />
-        <item itemvalue="JUnit.DatabaseInitTest.whenDatabaseIsEmpty_createNewData" />
         <item itemvalue="JUnit.DatabaseInitTest.whenDatabaseNotEmpty_DoNotAddData" />
+        <item itemvalue="JUnit.DatabaseInitTest.whenDatabaseIsEmpty_createNewData" />
+        <item itemvalue="JUnit.DatabaseInitTest" />
       </list>
     </recent_temporary>
   </component>
@@ -644,6 +842,7 @@
       <workItem from="1550269392683" duration="1728000" />
       <workItem from="1550332918120" duration="22203000" />
       <workItem from="1550413783344" duration="992000" />
+      <workItem from="1550424634919" duration="2279000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1549564508616</created>
@@ -722,13 +921,17 @@
       <option name="project" value="LOCAL" />
       <updated>1550362347250</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="- after merge of TODOservice to master branch">
+      <created>1550425097408</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1550425097408</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DatabaseInitTest - 2019.02.17 at 01h 45m 13s.xml">
-      <configuration name="DatabaseInitTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DatabaseInitTest_whenDatabaseIsEmpty_createNewData - 2019.02.17 at 01h 47m 34s.xml">
       <configuration name="DatabaseInitTest.whenDatabaseIsEmpty_createNewData" configurationId="JUnit" />
     </history-entry>
@@ -756,9 +959,12 @@
     <history-entry file="todoservice_in_TODOservice - 2019.02.17 at 01h 56m 12s.xml">
       <configuration name="todoservice in TODOservice" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_TODOservice - 2019.02.17 at 19h 32m 11s.xml">
+      <configuration name="All in TODOservice" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73882000" />
+    <option name="totallyTimeSpent" value="76161000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -771,9 +977,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="1" width="1481" height="1043" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24771288" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24771288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -784,18 +989,18 @@
       <window_info id="simpleUML" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989444" weight="0.40411702" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989444" weight="0.4032967" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3989011" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32967034" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32967034" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32967034" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010556" side_tool="true" weight="0.40989012" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49933246" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49933246" weight="0.46593407" />
       <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49929577" weight="0.32857144" />
       <window_info anchor="bottom" id="Regex" order="15" />
       <window_info anchor="bottom" id="Gradle View" order="16" />
@@ -803,7 +1008,7 @@
       <window_info anchor="bottom" id="SonarLint" order="18" sideWeight="0.49929577" weight="0.32936078" />
       <window_info anchor="bottom" id="SonarQube" order="19" weight="0.32967034" />
       <window_info anchor="bottom" id="Log4jMonitor" order="20" weight="0.32967034" />
-      <window_info anchor="bottom" id="Run Dashboard" order="21" visible="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Run Dashboard" order="21" weight="0.32857144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -876,7 +1081,8 @@
     <MESSAGE value="- created Spring context for tests" />
     <MESSAGE value="- added new unit tests" />
     <MESSAGE value="- all unit tests done and passed" />
-    <option name="LAST_COMMIT_MESSAGE" value="- all unit tests done and passed" />
+    <MESSAGE value="- after merge of TODOservice to master branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="- after merge of TODOservice to master branch" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -1016,13 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/databaseCreationScript.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/controllers/TodoServiceControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -1047,20 +1246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/TodoServiceApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/test.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/dao/TodoServiceDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1076,16 +1261,6 @@
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/init/DatabaseInit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/init/DatabaseInitTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -1096,9 +1271,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/utils/ContextConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/databaseCreationScript.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/controllers/TodoServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/integrationtests/DatabaseTest.story">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/TodoServiceApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/test.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/init/DatabaseInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/utils/FakeDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
+        <state relative-caret-position="175">
           <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1132,25 +1367,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/utils/ContextConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/todoservice/init/SimpleSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/todoservice/controllers/TodoServiceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="50">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>

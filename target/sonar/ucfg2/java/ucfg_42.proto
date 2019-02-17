@@ -1,0 +1,81 @@
+
+<todoservice.web.dto.TodoPostDto#toString()Ljava/lang/String;
+__unknown_file ("1*¼
+1X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8 8(Ú×
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8 8(
+%0java.lang.Long"7todoservice.web.dto.TodoPostDto#getId()Ljava/lang/Long;*#!
+todoservice.web.dto.TodoPostDto2getId()¡
+ž
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8 8(
+%1java.lang.String"__concat*
+ID: *
+
+%0java.lang.Long§
+¤
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8 8(,
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+
+, Task: êç
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8/ 8(<
+%3java.lang.String"?todoservice.web.dto.TodoPostDto#getWhatTODO()Ljava/lang/String;*#!
+todoservice.web.dto.TodoPostDto2getWhatTODO()³
+°
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8 8(<
+%4java.lang.String"__concat*
+
+%2java.lang.String*
+
+%3java.lang.String§
+¤
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8 8(I
+%5java.lang.String"__concat*
+
+%4java.lang.String*
+
+, Date: äá
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8L 8(V
+%6java.lang.String"<todoservice.web.dto.TodoPostDto#getDatum()Ljava/lang/String;*#!
+todoservice.web.dto.TodoPostDto2
+getDatum()³
+°
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8 8(V
+%7java.lang.String"__concat*
+
+%5java.lang.String*
+
+%6java.lang.String¨
+¥
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8 8(d
+%8java.lang.String"__concat*
+
+%7java.lang.String*
+	, Status îë
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8g 8(v
+%9java.lang.String"Atodoservice.web.dto.TodoPostDto#getDoneStatus()Ljava/lang/String;*#!
+todoservice.web.dto.TodoPostDto2getDoneStatus()´
+±
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8 8(v
+%10java.lang.String"__concat*
+
+%8java.lang.String*
+
+%9java.lang.String"u
+X
+ND:\JavaProjects\TODOservice\src\main\java\todoservice\web\dto\TodoPostDto.java8 8(w
+
+%10java.lang.StringB#!
+todoservice.web.dto.TodoPostDto

@@ -1,0 +1,34 @@
+
+útodoservice.TodoServiceApp#configure(Lorg/springframework/boot/builder/SpringApplicationBuilder;)Lorg/springframework/boot/builder/SpringApplicationBuilder;
+__unknown_file ("paramAnnotations*¯
+paramAnnotationsS
+ID:\JavaProjects\TODOservice\src\main\java\todoservice\TodoServiceApp.java0 (VŒ
+À
+S
+ID:\JavaProjects\TODOservice\src\main\java\todoservice\TodoServiceApp.java (
+%1"
+__annotate*
+java.lang.Override*J
+H
+application9org.springframework.boot.builder.SpringApplicationBuilder∏
+µ
+S
+ID:\JavaProjects\TODOservice\src\main\java\todoservice\TodoServiceApp.javaJ (UH
+application9org.springframework.boot.builder.SpringApplicationBuilder"__annotation*
+
+%1*
+1*ì
+1S
+ID:\JavaProjects\TODOservice\src\main\java\todoservice\TodoServiceApp.java (ùö
+S
+ID:\JavaProjects\TODOservice\src\main\java\todoservice\TodoServiceApp.java (8?
+%09org.springframework.boot.builder.SpringApplicationBuilder"êorg.springframework.boot.builder.SpringApplicationBuilder#sources([Ljava/lang/Class;)Lorg/springframework/boot/builder/SpringApplicationBuilder;*J
+H
+application9org.springframework.boot.builder.SpringApplicationBuilder*
+""2sources([Ljava/lang/Class;)"ò
+S
+ID:\JavaProjects\TODOservice\src\main\java\todoservice\TodoServiceApp.java (9A
+?
+%09org.springframework.boot.builder.SpringApplicationBuilder:H
+application9org.springframework.boot.builder.SpringApplicationBuilderB
+todoservice.TodoServiceApp

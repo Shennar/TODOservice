@@ -1,0 +1,8 @@
+organization=shennar-github
+projectKey=Shennar_TODOservice
+serverUrl=https://sonarcloud.io
+serverVersion=7.7.0.22010
+branch=TODOservice
+dashboardUrl=https://sonarcloud.io/dashboard?id=Shennar_TODOservice&branch=TODOservice&resolved=false
+ceTaskId=AWj4x1tEbzfw5U2MTPP7
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWj4x1tEbzfw5U2MTPP7
