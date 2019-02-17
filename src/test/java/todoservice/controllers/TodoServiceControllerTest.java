@@ -1,6 +1,5 @@
 package todoservice.controllers;
 
-import org.dozer.DozerBeanMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,6 @@ import static org.junit.Assert.assertEquals;
 public class TodoServiceControllerTest {
 
     private String ERROR_MESSAGE_LAST_PART = " field must be filled. \n ";
-    final private DozerBeanMapper mapper = new DozerBeanMapper();
 
     @Autowired
     private FakeDatabase fakeTodoServiceDAO;
@@ -33,9 +31,9 @@ public class TodoServiceControllerTest {
 
     @Test
     public void whenSentGetRequest_allPostsShown() {
-        List<TodoPostDto> actualRecords = restController.getAllPosts();
+        final List<TodoPostDto> actualRecords = restController.getAllPosts();
         final List<TodoPostDto> fakeDatabase = createFakeDatabase();
-        assertEquals(actualRecords, fakeDatabase);
+        assertEquals(actualRecords.toString(), fakeDatabase.toString());
     }
 
     @Test
@@ -43,7 +41,8 @@ public class TodoServiceControllerTest {
         final TodoPostDto postDto = new TodoPostDto(1L, "Datum", "whatTODO", "Done");
         final TodoPostResponse expectedResponse = new TodoPostResponse(postDto, "OK");
         final TodoPostResponse createdResponse = restController.addTodoPost("Datum", "whatTODO", "Done");
-        assertEquals(expectedResponse, createdResponse);
+        assertEquals(expectedResponse.toString(), createdResponse.toString());
+        assertEquals(expectedResponse.getErrors(), createdResponse.getErrors());
     }
 
     @Test
@@ -103,8 +102,10 @@ public class TodoServiceControllerTest {
     private List<TodoPostDto> createFakeDatabase() {
         final List<TodoPostDto> fakeDatabase = new ArrayList<>();
         TodoPostDto postDto;
+        Long id;
         for (int i = 0; i < 5; i++) {
-            postDto = new TodoPostDto(1L, "Fakedate" + (i + 1), "Task " + (i + 1), "false");
+            id = Long.parseLong("" + i);
+            postDto = new TodoPostDto(id, "Fakedate" + (i + 1), "Task " + (i + 1), "false");
             fakeDatabase.add(postDto);
         }
         return fakeDatabase;

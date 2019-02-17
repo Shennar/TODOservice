@@ -1,19 +1,17 @@
 package todoservice.init;
 
-import todoservice.dao.TodoServiceDao;
-import todoservice.domain.TodoPost;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import org.joda.time.DateTime;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-import org.joda.time.DateTime;
+import todoservice.dao.TodoServiceDao;
+import todoservice.domain.TodoPost;
 
 @Component
 public class DatabaseInit implements ApplicationRunner {
+
     private TodoServiceDao todoServiceDAO;
 
-    @Autowired
     public DatabaseInit(TodoServiceDao todoServiceDAO) {
         this.todoServiceDAO = todoServiceDAO;
     }

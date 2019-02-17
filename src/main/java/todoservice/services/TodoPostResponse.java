@@ -56,4 +56,9 @@ public class TodoPostResponse {
     public void setErrors(String errors) {
         this.errors = errors;
     }
+
+    public String toString(){
+        return "ID: " + getId() + ", Task: " + getWhatTODO() + ", Date: " + getDatum() + ", Status " + getDoneStatus() +
+                ", Errors: " + getErrors();
+    }
 }

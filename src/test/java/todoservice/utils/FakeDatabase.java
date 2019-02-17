@@ -10,12 +10,14 @@ import todoservice.domain.TodoPost;
 import todoservice.web.dto.TodoPostDto;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 public class FakeDatabase implements TodoServiceDao {
 
     final private DozerBeanMapper mapper = new DozerBeanMapper();
+    private List<TodoPost> fakeRepository = new ArrayList<>();
 
     @Override
     public TodoPost saveAndFlush(final TodoPost entity) {
@@ -38,11 +40,29 @@ public class FakeDatabase implements TodoServiceDao {
         Long id;
         for (int i = 0; i < 5; i++) {
             id = Long.parseLong("" + i);
-            postDto = new TodoPostDto(id, "Fakedate" + (i + 1), "Task " + (i + 1), "Done");
+            postDto = new TodoPostDto(id, "Fakedate" + (i + 1), "Task " + (i + 1), "false");
             post = mapper.map(postDto, TodoPost.class);
             fakeDatabase.add(post);
         }
         return fakeDatabase;
+    }
+
+    public List<TodoPost> getFakeRepository(){
+        return fakeRepository;
+    }
+    @Override
+    public long count() {
+        return fakeRepository.size();
+    }
+
+    @Override
+    public TodoPost save(TodoPost entity) {
+        if (entity == null) {
+            fakeRepository.clear();
+        } else {
+            fakeRepository.add( entity);
+        }
+        return entity;
     }
 
     @Override
@@ -50,11 +70,6 @@ public class FakeDatabase implements TodoServiceDao {
         if (id < 0) {
             throw new IllegalArgumentException();
         }
-    }
-
-    @Override
-    public <S extends TodoPost> S save(S entity) {
-        return null;
     }
 
     @Override
@@ -135,11 +150,6 @@ public class FakeDatabase implements TodoServiceDao {
     @Override
     public List<TodoPost> findAllById(Iterable<Long> longs) {
         return null;
-    }
-
-    @Override
-    public long count() {
-        return 0;
     }
 
     @Override

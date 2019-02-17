@@ -21,6 +21,7 @@ import java.util.List;
 public class TodoServiceController {
 
     private TodoServiceDao todoServiceDAO;
+    final DozerBeanMapper mapper = new DozerBeanMapper();
 
     public TodoServiceController(final TodoServiceDao todoServiceDao) {
         this.todoServiceDAO = todoServiceDao;
@@ -28,7 +29,6 @@ public class TodoServiceController {
 
     @RequestMapping(method = RequestMethod.GET)
     public List<TodoPostDto> getAllPosts() {
-        final DozerBeanMapper mapper = new DozerBeanMapper();
         final List<TodoPostDto> allPostsUI = new ArrayList<>();
         for (final TodoPost post : todoServiceDAO.findAll()) {
             final TodoPostDto postUI = mapper.map(post, TodoPostDto.class);
