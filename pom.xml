@@ -8,7 +8,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.1.RELEASE</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>training.task</groupId>
@@ -128,6 +128,14 @@
             <version>2.9.7</version>
         </dependency>
 
+        <!-- H2 database for integration tests -->
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.197</version>
+            <scope>runtime</scope>
+        </dependency>
 
         <!-- Hibernate -->
 
@@ -141,6 +149,7 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.3.6.Final</version>
         </dependency>
+
         <!-- Entity Validation -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -181,6 +190,6 @@
                 <version>2.0.5.RELEASE</version>
             </plugin>
 
-       </plugins>
-   </build>
+        </plugins>
+    </build>
 </project>
