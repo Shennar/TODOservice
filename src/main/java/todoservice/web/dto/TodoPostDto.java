@@ -1,4 +1,4 @@
-package TODOservice.web.dto;
+package todoservice.web.dto;
 
 public class TodoPostDto {
 
@@ -50,5 +50,9 @@ public class TodoPostDto {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String toString(){
+        return "ID: " + getId() + ", Task: " + getWhatTODO() + ", Date: " + getDatum() + ", Status " + getDoneStatus();
     }
 }

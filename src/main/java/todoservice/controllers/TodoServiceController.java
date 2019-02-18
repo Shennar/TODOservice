@@ -1,56 +1,52 @@
-package TODOservice.controllers;
+package todoservice.controllers;
 
-import TODOservice.dao.TodoServiceDao;
-import TODOservice.domain.TodoPost;
-import TODOservice.services.TodoPostResponse;
-import TODOservice.web.dto.TodoPostDto;
-
+import todoservice.dao.TodoServiceDao;
+import todoservice.domain.TodoPost;
+import todoservice.services.TodoPostResponse;
+import todoservice.web.dto.TodoPostDto;
 import org.dozer.DozerBeanMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.lang.IllegalArgumentException;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping(value = "/todo", produces = MediaType.APPLICATION_JSON_VALUE)
 public class TodoServiceController {
 
-    @Autowired
     private TodoServiceDao todoServiceDAO;
+    final DozerBeanMapper mapper = new DozerBeanMapper();
+
+    public TodoServiceController(final TodoServiceDao todoServiceDao) {
+        this.todoServiceDAO = todoServiceDao;
+    }
 
     @RequestMapping(method = RequestMethod.GET)
     public List<TodoPostDto> getAllPosts() {
-        final DozerBeanMapper mapper = new DozerBeanMapper();
         final List<TodoPostDto> allPostsUI = new ArrayList<>();
         for (final TodoPost post : todoServiceDAO.findAll()) {
             final TodoPostDto postUI = mapper.map(post, TodoPostDto.class);
             allPostsUI.add(postUI);
         }
-        System.out.println("All posts listed");
         return allPostsUI;
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public TodoPostResponse addTodoPost(@RequestParam("datum") String datum, @RequestParam("whatTODO") String whatTODO,
-            @RequestParam("doneStatus") String doneStatus) {
+                                        @RequestParam("doneStatus") String doneStatus) {
         final String validationResult = validator(datum, whatTODO, doneStatus);
         final TodoPostResponse postUI;
         if (validationResult.isEmpty()) {
             final TodoPost postToAdd = new TodoPost();
             postToAdd.setDatum(datum.replace('T', ' '));
             postToAdd.setWhatTODO(whatTODO);
-            if ("Done".equals(doneStatus)) {
-                postToAdd.setDoneStatus(true);
-            } else {
-                postToAdd.setDoneStatus(false);
-            }
+            postToAdd.setDoneStatus("Done".equals(doneStatus));
             final TodoPost postAdded = todoServiceDAO.saveAndFlush(postToAdd);
             final Long id = postAdded.getId();
             postUI = new TodoPostResponse(new TodoPostDto(id, datum.replace('T', ' '),
@@ -62,12 +58,12 @@ public class TodoServiceController {
     }
 
     @RequestMapping(method = RequestMethod.DELETE)
-    public String deleteTodoPost(@RequestParam("idToDelete") Long idToDelete) {
+    public ResponseEntity<String> deleteTodoPost(@RequestParam("idToDelete") Long idToDelete) {
         try {
             todoServiceDAO.deleteById(idToDelete);
-            return "Successfully deleted task with ID: ";
+            return new ResponseEntity<>("Successfully deleted task with ID: ", HttpStatus.OK);
         } catch (IllegalArgumentException e) {
-            return "Impossible to delete task with ID: ";
+            return new ResponseEntity<>("", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -84,7 +80,7 @@ public class TodoServiceController {
             }
         }
         if (postNotFound) {
-            return new ResponseEntity<String>("", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("", HttpStatus.NOT_FOUND);
         }
         if (postToChange.isDoneStatus()) {
             postToChange.setDoneStatus(false);
@@ -94,7 +90,7 @@ public class TodoServiceController {
             postStatusForUI = "Done";
         }
         todoServiceDAO.saveAndFlush(postToChange);
-        return new ResponseEntity<String>(postStatusForUI, HttpStatus.OK);
+        return new ResponseEntity<>(postStatusForUI, HttpStatus.OK);
     }
 
     private String validator(String datum, String whatTODO, String doneStatus) {
@@ -103,7 +99,7 @@ public class TodoServiceController {
         if (whatTODO.length() == 0) errors += "Task" + fixedString;
         if (doneStatus.length() == 0) errors += "Status" + fixedString;
         else if (!("TO DO".equals(doneStatus) || "Done".equals(doneStatus)))
-            errors += "Only TODO or Done is allowed for Status. \n";
+            errors += "Only TO DO or Done is allowed for Status. \n";
         if (datum.length() == 0) errors += "Date-time" + fixedString;
         return errors;
     }

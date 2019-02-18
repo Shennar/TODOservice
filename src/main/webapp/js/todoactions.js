@@ -37,7 +37,6 @@ $(document).ready(function () {
             addAction();
         }
     });
-
 });
 
 
@@ -53,11 +52,14 @@ function checkButton() {
                 url: window.location + 'todo?idToDelete=' + idd,
                 type: "DELETE",
                 dataType: "text",
-                success: function (r) {
-                    if (r !== "Impossible to delete task with ID: ") {
+                statusCode: {
+                    500: function () {
+                        alert("No such record in the database.");
+                    }
+                },
+                success: function (response) {
                         rowToChange.remove();
-                        alert(r + idd);
-                    } else alert(r + idd);
+                        alert(response + idd);
                 }
             });
         }
@@ -67,19 +69,17 @@ function checkButton() {
                 url: window.location + 'todo?idToChange=' + idd,
                 type: "PUT",
                 dataType: "text",
-                statusCode:{404: alert("No such record in the database.")},
-                success: function (r) {
-                    var doneStatus = (r == "true") ? "Done" : "TO DO";
-                    if (r !== "No such record in the database.") {
-
-                        rowToChange.find('.status').replaceWith('<td class="status" style="' +
-                            statusColor(r) + '">' + r + '</td>');
-                    } else alert(r);
+                statusCode: {
+                    404: function () {
+                        alert("No such record in the database.");
+                    }
                 },
-                error: alert("No such record in the database."),
+                success: function (response) {
+                    rowToChange.find('.status').replaceWith('<td class="status" style="' +
+                        statusColor(response) + '">' + response + '</td>');
+                },
             });
         }
-
     });
 }
 
@@ -116,8 +116,7 @@ function addAction() {
                         $('#taskAdd').val("");
                         $('#statusAdd').val("");
                         checkButton();
-                    }
-                    else alert(task.errors);
+                    } else alert(task.errors);
                 }
             });
         }
@@ -127,8 +126,7 @@ function addAction() {
 function statusColor(text) {
     if (text === "Done") {
         return "color:green";
-    }
-    else {
+    } else {
         return "color:red";
     }
 }

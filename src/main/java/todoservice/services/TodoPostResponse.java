@@ -1,6 +1,6 @@
-package TODOservice.services;
+package todoservice.services;
 
-import TODOservice.web.dto.TodoPostDto;
+import todoservice.web.dto.TodoPostDto;
 
 public class TodoPostResponse {
     public TodoPostResponse(TodoPostDto post, String errors) {
@@ -55,5 +55,10 @@ public class TodoPostResponse {
 
     public void setErrors(String errors) {
         this.errors = errors;
+    }
+
+    public String toString(){
+        return "ID: " + getId() + ", Task: " + getWhatTODO() + ", Date: " + getDatum() + ", Status " + getDoneStatus() +
+                ", Errors: " + getErrors();
     }
 }
