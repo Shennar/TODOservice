@@ -1,5 +1,6 @@
 package todoservice.utils;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import todoservice.dao.TodoServiceDao;
 import todoservice.domain.TodoPost;
 import todoservice.web.dto.TodoPostDto;
@@ -10,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -78,6 +80,11 @@ public class FakeDatabase implements TodoServiceDao {
     }
 
     @Override
+    public Optional<TodoPost> findById(Long aLong) {
+        return Optional.empty();
+    }
+
+    @Override
     public void flush() {
 
     }
@@ -125,11 +132,6 @@ public class FakeDatabase implements TodoServiceDao {
     @Override
     public <S extends TodoPost> boolean exists(Example<S> example) {
         return false;
-    }
-
-    @Override
-    public Optional<TodoPost> findById(Long aLong) {
-        return Optional.empty();
     }
 
     @Override
