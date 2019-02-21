@@ -1,9 +1,5 @@
 package todoservice.controllers;
 
-import todoservice.dao.TodoServiceDao;
-import todoservice.domain.TodoPost;
-import todoservice.services.TodoPostResponse;
-import todoservice.web.dto.TodoPostDto;
 import org.dozer.DozerBeanMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -12,6 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import todoservice.dao.TodoServiceDao;
+import todoservice.domain.TodoPost;
+import todoservice.services.TodoPostResponse;
+import todoservice.web.dto.TodoPostDto;
 
 import java.util.ArrayList;
 import java.util.List;

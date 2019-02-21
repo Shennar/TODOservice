@@ -23,6 +23,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <start-class>todoservice.TodoServiceApp</start-class>
         <java.version>1.9</java.version>
         <jackson.version>2.9.7</jackson.version>
         <hibernate.version>4.2.7.Final</hibernate.version>
@@ -173,6 +174,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jbehave</groupId>
+            <artifactId>jbehave-core</artifactId>
+            <version>4.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.thucydides</groupId>
+            <artifactId>thucydides-jbehave-plugin</artifactId>
+            <version>0.9.275</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -187,6 +199,47 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.1.3.RELEASE</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.22.1</version>
+                <executions>
+                    <execution>
+                        <id>integration-test</id>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jbehave</groupId>
+                <artifactId>jbehave-maven-plugin</artifactId>
+                <version>3.8</version>
+                <executions>
+                    <execution>
+                        <id>run-stories-as-embeddables</id>
+                        <phase>integration-test</phase>
+                        <configuration>
+                            <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
+                            <includes>
+                                <include>**/*.java</include>
+                            </includes>
+                            <ignoreFailureInStories>false</ignoreFailureInStories>
+                            <ignoreFailureInView>false</ignoreFailureInView>
+                        </configuration>
+                        <goals>
+                            <goal>run-stories-as-embeddables</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
