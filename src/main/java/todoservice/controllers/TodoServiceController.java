@@ -4,6 +4,7 @@ import org.dozer.DozerBeanMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,13 +19,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/todo", produces = MediaType.APPLICATION_JSON_VALUE)
+@Component
 public class TodoServiceController {
 
     private TodoServiceDao todoServiceDAO;
-    final DozerBeanMapper mapper = new DozerBeanMapper();
+
+    private final DozerBeanMapper mapper = new DozerBeanMapper();
 
     public TodoServiceController(final TodoServiceDao todoServiceDao) {
         this.todoServiceDAO = todoServiceDao;
+    }
+
+    public TodoServiceController() {
     }
 
     @RequestMapping(method = RequestMethod.GET)

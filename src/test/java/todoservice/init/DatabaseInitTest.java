@@ -1,5 +1,6 @@
 package todoservice.init;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +22,13 @@ public class DatabaseInitTest {
     @Autowired
     private DatabaseInit databaseInit;
 
+    @Before
+    public void setUp() {
+        fakeTodoServiceDAO.save(null);
+    }
+
     @Test
     public void whenDatabaseIsEmpty_createNewData() throws Exception {
-        fakeTodoServiceDAO.save(null);
         databaseInit.run(null);
         assertEquals(8, fakeTodoServiceDAO.getFakeRepository().size());
     }
@@ -35,7 +40,6 @@ public class DatabaseInitTest {
         post.setWhatTODO("To do");
         post.setDatum("Datum");
         post.setDoneStatus(false);
-        fakeTodoServiceDAO.save(null);
         fakeTodoServiceDAO.save(post);
         databaseInit.run(null);
         assertEquals(1, fakeTodoServiceDAO.getFakeRepository().size());
